@@ -1,5 +1,4 @@
 import SeoHead from "@/components/SeoHead";
-import Image from "next/image";
 import Link from "next/link";
 import Shape1Svg from "public/shape1.svg?react";
 import Shape2Svg from "public/shape2.svg?react";
