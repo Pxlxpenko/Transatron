@@ -1,10 +1,10 @@
 /* eslint-disable react-refresh/only-export-components */
 import type { GetStaticPaths, GetStaticProps } from "next";
 import { blogService } from "@/services/blogService";
-import type { BlogPost } from "@/types/blog";
-import BlogPostDetailView from "@/components/BlogPostDetailView";
+import type { BlogPost } from "@/components/types/blog";
 import SeoHead from "@/components/SeoHead";
 import JsonLd from "@/components/JsonLd";
+import BlogPostDetailView from "@/components/BlogPostDetailView";
 
 type Props = { post: BlogPost | null; morePosts: BlogPost[] };
 

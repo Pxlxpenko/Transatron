@@ -67,8 +67,8 @@ export default function Header() {
             //   key={item.name}
             //   href={`/${item.href}`}
             //   className={cn(
-            //     "relative hover:bg-[#0DEC89]/10 px-4 py-2 text-white active:text-primary active:bg-accent text-center text-lg",
-            //     { "text-primary bg-accent": item.href === pathname }
+            //     "relative hover:bg-[#0DEC89]/10 px-4 py-2 text-white active:text-white active:bg-accent text-center text-lg",
+            //     { "text-white bg-accent": item.href === pathname }
             //   )}
             // >
             //   {item.name}
@@ -121,8 +121,8 @@ export default function Header() {
                   href={item.link}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "relative hover:bg-[#0DEC89]/10 px-4 rounded-full py-2 w-25 text-white active:text-primary text-center text-lg",
-                    { "text-primary": item.link === pathname }
+                    "relative hover:bg-[#0DEC89]/10 px-4 rounded-full py-2 w-25 text-white active:text-white text-center text-lg",
+                    { "text-white": item.link === pathname }
                   )}
                 >
                   {item.name}
@@ -134,7 +134,7 @@ export default function Header() {
               //     href={`/${item.href}`}
               //     onClick={() => setOpen(false)}
               //     className={cn(
-              //       "relative hover:bg-[#0DEC89]/10 px-4 py-2 w-25 text-white active:text-primary text-center text-lg"
+              //       "relative hover:bg-[#0DEC89]/10 px-4 py-2 w-25 text-white active:text-white text-center text-lg"
               //     )}
               //   >
               //     {item.name}

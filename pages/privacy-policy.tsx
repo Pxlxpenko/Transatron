@@ -16,11 +16,11 @@ export default function PrivacyPolicyPage() {
         <div className="relative mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[1.6px]">
           <a
             href="/"
-            className="text-white hover:text-primary transition-colors duration-200"
+            className="text-white hover:text-white transition-colors duration-200"
           >
             HOME
           </a>{" "}
-          / <span className="text-primary uppercase">PRIVACY POLICY</span>
+          / <span className="text-white uppercase">PRIVACY POLICY</span>
         </div>
         <FadeInSection className="z-10 relative mx-auto mt-8 px-10 lg:px-0 max-w-214 font-normal text-xl leading-7 tracking-[1.6px]">
           <h1 className="relative mb-[58px] font-bold text-[54px] text-white text-center leading-16 tracking-[1.6px]">
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
           collected, used, and shared when you visit the{" "}
           <a
             href="https://www.agger-labs.com/"
-            className="text-primary underline"
+            className="text-white underline"
             target="_blank"
           >
             https://www.agger-labs.com/

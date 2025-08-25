@@ -202,8 +202,6 @@ function BlogIndexInner() {
 
   return (
     <div className="relative pt-37 pb-18.5 w-full min-h-screen">
-      <div className="top-0 left-0 absolute w-full h-[700px] hero-bg" />
-      <div className="top-[700px] bottom-0 absolute bg-[#060B08]/95 w-full" />
       <FadeInSection
         triggerOnMount
         className="relative flex flex-col gap-6 mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[1.6px]"
@@ -215,10 +213,11 @@ function BlogIndexInner() {
           <div className="flex flex-row flex-wrap gap-4">
             <Button
               className={cn(
-                "text-white text-lg px-6! h-12!",
-                selectedCategory === "" && "text-primary"
+                "text-white text-lg px-6! hover:bg-accent-pink h-12! border-2 border-transparent bg-accent-dark",
+                selectedCategory === "" &&
+                  "text-white bg-accent-pink  border-white"
               )}
-              variant={"tertiary"}
+              variant="default"
               onClick={() => handleCategoryClick("")}
             >
               #All
@@ -226,10 +225,11 @@ function BlogIndexInner() {
             {categories.map((category) => (
               <Button
                 key={category._id}
-                variant={"tertiary"}
+                variant="default"
                 className={cn(
-                  "text-white text-lg font-medium px-6! h-12!",
-                  selectedCategory === category._id && "text-primary"
+                  "text-white text-lg font-medium hover:bg-accent-pink px-6! h-12! bg-accent-dark border-2 border-transparent",
+                  selectedCategory === category._id &&
+                    "text-white bg-accent-pink  border-white"
                 )}
                 onClick={() => handleCategoryClick(category._id)}
               >
@@ -255,7 +255,7 @@ function BlogIndexInner() {
                     href={`/blog/${post.slug.current}`}
                     className={`${
                       isWide ? "lg:col-span-2" : ""
-                    } group cursor-pointer bg-[#131313] active:border-white active:bg-[#1D1D1F] transition-all duration-300 hover:border-white hover:bg-[#1D1D1F] border-primary border p-6 flex flex-col gap-[15px]`}
+                    } group cursor-pointer bg-accent-dark hover:bg-accent-pink border-white active:border-white active:bg-accent-pink transition-all duration-300 hover:border-white border p-6 flex flex-col gap-[15px]`}
                   >
                     {post.featuredMedia?.asset?.url && (
                       <Image
@@ -273,17 +273,17 @@ function BlogIndexInner() {
                             className="text-white text-sm uppercase leading-5 tracking-[1.6px]"
                             key={v.name}
                           >
-                            <span className="text-primary">#</span>
+                            <span className="text-white">#</span>
                             {v.name}
                           </p>
                         ))}
                       </div>
                     )}
-                    <h3 className="font-bold text-white group-hover:text-primary text-2xl line-clamp-2 leading-7 tracking-[1.6px]">
+                    <h3 className="font-bold text-white group-hover:text-white text-2xl line-clamp-2 leading-7 tracking-[1.6px]">
                       {post.title}
                     </h3>
                     {post.date && (
-                      <p className="text-primary text-sm leading-5 tracking-[1.6px]">
+                      <p className="text-white text-sm leading-5 tracking-[1.6px]">
                         {new Date(post.date)
                           .toLocaleDateString("en-GB", {
                             day: "2-digit",

@@ -11,11 +11,9 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow-xs hover:bg-white active:bg-[#45FFA8]",
+          "bg-primary text-white-foreground shadow-xs hover:bg-white active:bg-accent-pink",
         secondary:
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        tertiary:
-          "bg-tertiary backdrop-blur-xs text-tertiary-foreground hover:border-white active:text-primary active:[&_path]:stroke-primary active:border-primary border border-gray1 ",
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-[#D72A2C] focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
       },
