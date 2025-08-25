@@ -33,7 +33,7 @@ export default function IndexPage() {
         <Link
           href={"/transfer-edge"}
           style={{
-            clipPath: "polygon(0 0%, 100% 0%, 100% 116%, 0 -9%)",
+            clipPath: "polygon(0 0%, 100% 0%, 100% 116%, 0 -17%)",
           }}
           className="group right-0 absolute flex flex-col justify-center items-center pl-21 w-full max-h-[536px]"
         >
