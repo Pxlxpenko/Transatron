@@ -33,7 +33,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <main className="z-[1] flex flex-col grow">
           <Component {...pageProps} />
         </main>
-        <Footer />
       </div>
       <SpeedInsights />
       {showToaster && <Toaster />}
