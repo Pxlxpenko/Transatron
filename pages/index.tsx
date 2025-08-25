@@ -25,7 +25,7 @@ export default function IndexPage() {
                 A crypto payment one-stop
                 <br /> shop for businesses
               </p>
-              <h1 className="max-w-[480px] font-black text-white sm:text-5xl text-7xl md:text-8xl! uppercase">
+              <h1 className="max-w-[480px] font-black text-white sm:text-5xl text-7xl md:text-8xl! uppercase group-hover:scale-102 transition-all duration-150">
                 Business Suite
               </h1>
             </div>
@@ -52,7 +52,7 @@ export default function IndexPage() {
           /> */}
           <div className="top-0 right-0 absolute flex flex-col gap-4">
             <div className="flex flex-col items-end gap-4 p-15">
-              <h1 className="max-w-[540px] font-black text-white sm:text-5xl text-7xl md:text-8xl! text-end uppercase">
+              <h1 className="max-w-[540px] font-black text-white sm:text-5xl text-7xl md:text-8xl! text-end uppercase group-hover:scale-102! transition-all duration-150">
                 Transfer Edge
               </h1>
               <p className="font-bold text-white xl:text-[28px] text-base text-end leading-[110%]">
