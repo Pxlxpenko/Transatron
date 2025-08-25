@@ -11,8 +11,8 @@ function BusinessSuiteInner() {
   }, []);
 
   return (
-    <>
-      <div className="pt-[134px] w-full">
+    <div className="relative w-full h-screen overflow-y-auto snap-mandatory snap-y">
+      <div className="flex flex-col justify-center items-center pt-[134px] w-full h-screen snap-start">
         <FadeInSection
           triggerOnMount
           className="relative flex justify-between gap-6 mx-auto mb-15 p-14 rounded-[48px] w-full max-w-[1360px] bg-accent-dark"
@@ -34,7 +34,7 @@ function BusinessSuiteInner() {
           <Image src="/hero2.svg" alt="Hero 2" width={471} height={403} />
         </FadeInSection>
       </div>
-      <div className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full h-[770px]">
+      <div className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full h-screen snap-start">
         <FadeInSection
           triggerOnMount
           className="relative flex flex-col justify-center items-center px-10 w-full max-w-[1360px] h-full"
@@ -51,7 +51,7 @@ function BusinessSuiteInner() {
           </h2>
         </FadeInSection>
       </div>
-      <div className="py-15 w-full bg-accent-dark">
+      <div className="flex flex-col justify-center items-center py-15 w-full h-screen bg-accent-dark snap-start">
         <FadeInSection
           triggerOnMount
           className="relative flex flex-col items-center gap-16 mx-auto px-25 w-full max-w-[1360px]"
@@ -81,7 +81,7 @@ function BusinessSuiteInner() {
           </Button>
         </FadeInSection>
       </div>
-      <div className="bg-primary py-15 w-full">
+      <div className="flex flex-col justify-center items-center bg-primary py-15 w-full h-screen snap-start">
         <FadeInSection
           triggerOnMount
           className="relative flex flex-col items-center gap-16 mx-auto px-25 w-full max-w-[1360px]"
@@ -107,7 +107,7 @@ function BusinessSuiteInner() {
           </div>
         </FadeInSection>
       </div>
-    </>
+    </div>
   );
 }
 
