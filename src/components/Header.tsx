@@ -56,7 +56,7 @@ export default function Header() {
                 key={item.name}
                 href={item.link}
                 className={cn(
-                  "relative hover:bg-[#0DEC89]/10 px-4 rounded-full py-2  text-white  text-center text-lg",
+                  "relative hover:bg-accent! px-4 rounded-full py-2  text-white  text-center text-lg",
                   { "text-white bg-accent": item.link === pathname }
                 )}
               >
