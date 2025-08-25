@@ -1,9 +1,9 @@
 import Footer from "@/components/Footer";
-import HeroSection from "@/components/HeroSection";
-import KeyFeaturesSection from "@/components/KeyFeaturesSection";
-import SecureSection from "@/components/SecureSection";
+import HeroSectionBusinessSuite from "@/components/HeroSectionBusinessSuite";
+import KeyFeaturesSectionBusinessSuite from "@/components/KeyFeaturesSectionBusinessSuite";
+import SecureSectionBusinessSuite from "@/components/SecureSectionBusinessSuite";
 import SeoHead from "@/components/SeoHead";
-import WatchInActionSection from "@/components/WatchInActionSection";
+import WatchInActionSectionBusinessSuite from "@/components/WatchInActionSectionBusinessSuite";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 
@@ -14,10 +14,10 @@ function BusinessSuiteInner() {
 
   return (
     <div className="relative w-full h-screen overflow-y-auto snap-mandatory snap-y">
-      <HeroSection />
-      <SecureSection />
-      <WatchInActionSection />
-      <KeyFeaturesSection />
+      <HeroSectionBusinessSuite />
+      <SecureSectionBusinessSuite />
+      <WatchInActionSectionBusinessSuite />
+      <KeyFeaturesSectionBusinessSuite />
       <Footer />
     </div>
   );

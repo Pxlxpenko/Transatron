@@ -1,5 +1,9 @@
-import FadeInSection from "@/components/FadeInSection";
+import Footer from "@/components/Footer";
+import HeroSectionTransferEdge from "@/components/HeroSectionTransferEdge";
+import KeyFeaturesSectionTransferEdge from "@/components/KeyFeaturesSectionTransferEdge";
+import SecureSectionTransferEdge from "@/components/SecureSectionTransferEdge";
 import SeoHead from "@/components/SeoHead";
+import WatchInActionSectionTransferEdge from "@/components/WatchInActionSectionTransferEdge";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 
@@ -9,13 +13,12 @@ function TransferEdgeInner() {
   }, []);
 
   return (
-    <div className="bg-primary">
-      <FadeInSection
-        triggerOnMount
-        className="relative flex flex-col gap-6 mx-auto px-10 w-full max-w-[1360px]"
-      >
-        dasd
-      </FadeInSection>
+    <div className="relative w-full h-screen overflow-y-auto snap-mandatory snap-y">
+      <HeroSectionTransferEdge />
+      <SecureSectionTransferEdge />
+      <WatchInActionSectionTransferEdge />
+      <KeyFeaturesSectionTransferEdge />
+      <Footer />
     </div>
   );
 }

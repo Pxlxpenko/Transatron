@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function SecureSection() {
+export default function SecureSectionBusinessSuite() {
   const [activeCoin, setActiveCoin] = useState(0);
 
   return (
@@ -21,7 +21,7 @@ export default function SecureSection() {
           width={1173}
           height={582}
           className={cn(
-            "absolute inset-0 w-full h-full transition-opacity duration-1000",
+            "absolute inset-0 w-full h-full transition-opacity  duration-1000",
             {
               "opacity-100": activeCoin === 0,
               "opacity-0": activeCoin !== 0,
@@ -47,7 +47,7 @@ export default function SecureSection() {
           width={1173}
           height={582}
           className={cn(
-            "absolute inset-0 w-full h-full transition-opacity duration-1000",
+            "absolute inset-0 w-full h-full transition-opacity  duration-1000",
             {
               "opacity-100": activeCoin === 2,
               "opacity-0": activeCoin !== 2,
@@ -60,7 +60,7 @@ export default function SecureSection() {
           width={1173}
           height={582}
           className={cn(
-            "absolute inset-0 w-full h-full transition-opacity duration-1000",
+            "absolute inset-0 w-full h-full transition-opacity  duration-1000",
             {
               "opacity-100": activeCoin === 3,
               "opacity-0": activeCoin !== 3,

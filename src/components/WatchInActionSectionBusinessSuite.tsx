@@ -1,7 +1,7 @@
 import FadeInSection from "@/components/FadeInSection";
 import { Button } from "@/components/ui/button";
 
-export default function WatchInActionSection() {
+export default function WatchInActionSectionBusinessSuite() {
   return (
     <div className="flex flex-col justify-center items-center py-15 w-full h-screen bg-accent-dark snap-start">
       <FadeInSection
@@ -27,7 +27,7 @@ export default function WatchInActionSection() {
         </div>
         <Button
           variant="default"
-          className="hover:bg-transparent px-12! border border-white hover:border-transparent rounded-full w-fit h-14! text-2xl bg-accent-dark"
+          className="hover:bg-transparent shadow-none px-12! border border-white hover:border-transparent rounded-full w-fit h-14! text-2xl bg-accent-dark"
         >
           Book a demo
         </Button>

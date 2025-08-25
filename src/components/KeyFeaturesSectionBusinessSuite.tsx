@@ -41,7 +41,7 @@ const features = [
   },
 ];
 
-export default function KeyFeaturesSection() {
+export default function KeyFeaturesSectionBusinessSuite() {
   return (
     <div className="flex flex-col justify-center items-center bg-primary py-15 w-full">
       <FadeInSection
