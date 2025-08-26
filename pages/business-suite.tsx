@@ -5,19 +5,30 @@ import SecureSectionBusinessSuite from "@/components/SecureSectionBusinessSuite"
 import SeoHead from "@/components/SeoHead";
 import WatchInActionSectionBusinessSuite from "@/components/WatchInActionSectionBusinessSuite";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
+import { useScrollSnapKeyFeatures } from "@/hooks/useScrollSnapKeyFeatures";
 
 function BusinessSuiteInner() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  const keyFeaturesRef = useRef<HTMLDivElement | null>(null);
+  const watchRef = useRef<HTMLDivElement | null>(null);
+
+  useScrollSnapKeyFeatures({
+    keyFeaturesRef,
+    watchRef,
+    rootMargin: "80% 0px 80% 0px",
+    downDelayMs: 250,
+  });
 
   return (
-    <div className="relative w-full h-screen overflow-y-auto snap-mandatory snap-y">
+    <div className="relative w-full">
       <HeroSectionBusinessSuite />
       <SecureSectionBusinessSuite />
-      <WatchInActionSectionBusinessSuite />
-      <KeyFeaturesSectionBusinessSuite />
+      <div ref={watchRef}>
+        <WatchInActionSectionBusinessSuite />
+      </div>
+      <div ref={keyFeaturesRef}>
+        <KeyFeaturesSectionBusinessSuite />
+      </div>
       <Footer />
     </div>
   );

@@ -5,19 +5,30 @@ import SecureSectionTransferEdge from "@/components/SecureSectionTransferEdge";
 import SeoHead from "@/components/SeoHead";
 import WatchInActionSectionTransferEdge from "@/components/WatchInActionSectionTransferEdge";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
+import { useScrollSnapKeyFeatures } from "@/hooks/useScrollSnapKeyFeatures";
 
 function TransferEdgeInner() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  const keyFeaturesRef = useRef<HTMLDivElement | null>(null);
+  const watchRef = useRef<HTMLDivElement | null>(null);
+
+  useScrollSnapKeyFeatures({
+    keyFeaturesRef,
+    watchRef,
+    rootMargin: "80% 0px 80% 0px",
+    downDelayMs: 250,
+  });
 
   return (
-    <div className="relative w-full h-screen overflow-y-auto snap-mandatory snap-y">
+    <div className="relative w-full">
       <HeroSectionTransferEdge />
       <SecureSectionTransferEdge />
-      <WatchInActionSectionTransferEdge />
-      <KeyFeaturesSectionTransferEdge />
+      <div ref={watchRef}>
+        <WatchInActionSectionTransferEdge />
+      </div>
+      <div ref={keyFeaturesRef}>
+        <KeyFeaturesSectionTransferEdge />
+      </div>
       <Footer />
     </div>
   );

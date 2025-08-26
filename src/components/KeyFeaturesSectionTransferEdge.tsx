@@ -49,7 +49,7 @@ export default function KeyFeaturesSectionTransferEdge() {
           triggerOnMount
           className="relative flex flex-col items-center mx-auto px-25 w-full max-w-[1360px]"
         >
-          <div className="flex flex-col justify-center items-center gap-10 w-full max-w-[924px] h-screen snap-start">
+          <div className="flex flex-col justify-center items-center gap-10 w-full max-w-[924px] h-screen">
             <h1 className="font-black text-white text-8xl text-center uppercase">
               benefits for your users
             </h1>
@@ -85,7 +85,7 @@ export default function KeyFeaturesSectionTransferEdge() {
           triggerOnMount
           className="relative flex flex-col items-center mx-auto px-25 w-full max-w-[1360px]"
         >
-          <div className="flex flex-col items-center gap-10 w-full max-w-[924px] bg-accent-pink snap-start">
+          <div className="flex flex-col items-center gap-10 w-full max-w-[924px] bg-accent-pink">
             <h1 className="font-black text-white text-8xl text-center uppercase">
               benefits for your wallet
             </h1>
