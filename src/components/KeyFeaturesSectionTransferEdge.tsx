@@ -47,17 +47,20 @@ export default function KeyFeaturesSectionTransferEdge() {
       <div className="flex flex-col justify-center items-center bg-primary py-15 w-full">
         <FadeInSection
           triggerOnMount
-          className="relative flex flex-col items-center mx-auto px-25 w-full max-w-[1360px]"
+          className="relative flex flex-col items-center mx-auto px-10 md:px-25 w-full max-w-[1360px]"
         >
-          <div className="flex flex-col justify-center items-center gap-10 w-full max-w-[924px] h-screen">
-            <h1 className="font-black text-white text-8xl text-center uppercase">
+          <div className="flex flex-col justify-center items-center gap-10 w-full max-w-[924px] min-h-screen">
+            <h1 className="font-black text-[40px] text-white sm:text-[58px] sm:text-8xl text-center uppercase">
               benefits for your users
             </h1>
             {features.slice(0, 3).map((feature, i) => (
               <div
                 className={cn(
-                  "flex justify-between gap-10 px-12.5 w-full",
-                  i % 2 === 0 && "flex-row-reverse"
+                  "flex flex-col justify-between items-center gap-10 md:px-12.5 w-full",
+                  {
+                    "md:flex-row-reverse": i % 2 === 0,
+                    "md:flex-row": i % 2 !== 0,
+                  }
                 )}
               >
                 <div className="flex flex-col gap-4">
@@ -83,17 +86,20 @@ export default function KeyFeaturesSectionTransferEdge() {
       <div className="flex flex-col justify-center items-center py-15 w-full bg-accent-pink">
         <FadeInSection
           triggerOnMount
-          className="relative flex flex-col items-center mx-auto px-25 w-full max-w-[1360px]"
+          className="relative flex flex-col items-center mx-auto px-10 md:px-25 w-full max-w-[1360px]"
         >
           <div className="flex flex-col items-center gap-10 w-full max-w-[924px] bg-accent-pink">
-            <h1 className="font-black text-white text-8xl text-center uppercase">
+            <h1 className="font-black text-[40px] text-white sm:text-[58px] sm:text-8xl text-center uppercase">
               benefits for your wallet
             </h1>
             {features.slice(3).map((feature, i) => (
               <div
                 className={cn(
-                  "flex justify-between gap-10 px-12.5 w-full",
-                  i % 2 === 0 && "flex-row-reverse"
+                  "flex flex-col justify-between items-center gap-10 md:px-12.5 w-full",
+                  {
+                    "md:flex-row-reverse": i % 2 === 0,
+                    "md:flex-row": i % 2 !== 0,
+                  }
                 )}
               >
                 <div className="flex flex-col gap-4">

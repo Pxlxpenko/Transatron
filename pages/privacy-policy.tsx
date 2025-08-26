@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <div className="relative pt-30.5 pb-18.5 w-full">
         <div className="top-0 left-0 absolute w-full h-[700px] hero-bg" />
         <div className="top-[700px] bottom-0 absolute bg-[#060B08]/95 w-full" />
-        <div className="relative mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[1.6px]">
+        <div className="relative mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[0.6px]">
           <a
             href="/"
             className="text-white hover:text-white transition-colors duration-200"
@@ -22,8 +22,8 @@ export default function PrivacyPolicyPage() {
           </a>{" "}
           / <span className="text-white uppercase">PRIVACY POLICY</span>
         </div>
-        <FadeInSection className="z-10 relative mx-auto mt-8 px-10 lg:px-0 max-w-214 font-normal text-xl leading-7 tracking-[1.6px]">
-          <h1 className="relative mb-[58px] font-bold text-[54px] text-white text-center leading-16 tracking-[1.6px]">
+        <FadeInSection className="z-10 relative mx-auto mt-8 px-10 lg:px-0 max-w-214 font-normal text-xl leading-7 tracking-[0.6px]">
+          <h1 className="relative mb-[58px] font-bold text-[54px] text-white text-center leading-16 tracking-[0.6px]">
             Privacy policy
           </h1>
           This Privacy Policy describes how your personal information is

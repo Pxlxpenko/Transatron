@@ -4,13 +4,13 @@ import Image from "next/image";
 
 export default function HeroSectionBusinessSuite() {
   return (
-    <div className="flex flex-col justify-center items-center pt-[134px] w-full h-screen snap-start">
+    <div className="flex flex-col justify-center items-center mx-auto px-5 md:px-10 pt-[100px] md:pt-[40px] pb-5 w-full max-w-[1360px] min-h-screen snap-start">
       <FadeInSection
         triggerOnMount
-        className="relative flex justify-between gap-6 mx-auto mb-15 p-14 rounded-[48px] w-full max-w-[1360px] bg-accent-dark"
+        className="relative flex xl:flex-row flex-col-reverse justify-between gap-6 mx-auto p-14 rounded-[48px] w-full bg-accent-dark"
       >
-        <div className="flex flex-col gap-10.5 max-w-[558px]">
-          <h1 className="font-black text-white text-8xl uppercase">
+        <div className="flex flex-col gap-10.5">
+          <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl uppercase">
             Business Suite
           </h1>
           <p className="font-bold text-[40px] text-white leading-[130%]">

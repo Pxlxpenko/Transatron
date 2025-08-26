@@ -29,7 +29,6 @@ function BusinessSuiteInner() {
       <div ref={keyFeaturesRef}>
         <KeyFeaturesSectionBusinessSuite />
       </div>
-      <Footer />
     </div>
   );
 }

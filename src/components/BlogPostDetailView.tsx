@@ -30,12 +30,12 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
   );
 
   return (
-    <div className="relative flex flex-col gap-8 pt-37 pb-12.5 w-full max-w-dvw min-h-screen overflow-hidden">
+    <div className="relative flex flex-col gap-8 pt-25 pb-12.5 w-full max-w-dvw min-h-screen overflow-hidden">
       <FadeInSection
         triggerOnMount
-        className="relative flex flex-col gap-8 mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[1.6px]"
+        className="relative flex flex-col gap-8 mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[0.6px]"
       >
-        <div className="relative mx-auto w-full text-sm leading-5 tracking-[1.6px]">
+        <div className="relative mx-auto w-full text-sm leading-5 tracking-[0.6px]">
           <Link
             href="/blog"
             className="text-white hover:text-white transition-colors duration-200"
@@ -45,7 +45,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
           / <span className="text-white uppercase">{post.title}</span>
         </div>
         <header>
-          <h1 className="mb-6 font-bold text-white text-5xl leading-16 tracking-[1.6px]">
+          <h1 className="mb-6 font-bold text-white text-5xl leading-16 tracking-[0.6px]">
             {post.title}
           </h1>
           <div className="flex flex-wrap justify-between items-center gap-4">
@@ -53,7 +53,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
               {post.categories?.map((category) => (
                 <span
                   key={category.name}
-                  className="text-white text-sm uppercase leading-5 tracking-[1.6px]"
+                  className="text-white text-sm uppercase leading-5 tracking-[0.6px]"
                 >
                   <span className="text-white">#</span>
                   {category.name}
@@ -62,7 +62,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
               {post.tags?.map((tag) => (
                 <span
                   key={tag.name}
-                  className="text-white text-sm uppercase leading-5 tracking-[1.6px]"
+                  className="text-white text-sm uppercase leading-5 tracking-[0.6px]"
                 >
                   {tag.name}
                 </span>
@@ -71,7 +71,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
             {post.date && (
               <time
                 dateTime={post.date}
-                className="text-white text-sm uppercase leading-5 tracking-[1.6px]"
+                className="text-white text-sm uppercase leading-5 tracking-[0.6px]"
               >
                 {formatDate(post.date)}
               </time>
@@ -100,7 +100,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
             />
           </div>
         )}
-        <div className="flex lg:flex-row flex-col justify-center gap-12 bg-white -mx-[10000px] py-10">
+        <div className="flex flex-row justify-center gap-12 bg-white -mx-[10000px] py-10">
           {post.content && (
             <PortableTextRenderer
               value={post.content}
@@ -108,7 +108,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
             />
           )}
           <div className="flex flex-col gap-8 lg:w-[371px] lg:shrink-0">
-            <p className="font-bold text-white text-2xl leading-7 tracking-[1.6px]">
+            <p className="font-bold text-white text-2xl leading-7 tracking-[0.6px]">
               More articles:
             </p>
             {relatedPosts.map((v) => (
@@ -121,7 +121,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
                   <div className="flex flex-wrap items-center gap-4">
                     {v.categories.map((c) => (
                       <p
-                        className="text-white text-sm uppercase leading-5 tracking-[1.6px]"
+                        className="text-white text-sm uppercase leading-5 tracking-[0.6px]"
                         key={c.name}
                       >
                         <span className="text-white">#</span>
@@ -130,10 +130,10 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
                     ))}
                   </div>
                 )}
-                <p className="text-white text-xl leading-7 tracking-[1.6px]">
+                <p className="text-white text-xl leading-7 tracking-[0.6px]">
                   {v.title}
                 </p>
-                <time className="text-white text-sm uppercase leading-5 tracking-[1.6px]">
+                <time className="text-white text-sm uppercase leading-5 tracking-[0.6px]">
                   {v.date ? formatDate(v.date) : ""}
                 </time>
               </Link>
@@ -143,7 +143,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
         <div className="flex flex-col gap-6">
           <Link
             href="/blog"
-            className="flex items-center gap-1 pt-6 text-white hover:text-white text-lg uppercase leading-5 tracking-[1.6px] transition-colors duration-200"
+            className="flex items-center gap-1 pt-6 text-white hover:text-white text-lg uppercase leading-5 tracking-[0.6px] transition-colors duration-200"
           >
             <ChevronLeft width={30} height={30} />
             BACK TO ALL ARTICLES

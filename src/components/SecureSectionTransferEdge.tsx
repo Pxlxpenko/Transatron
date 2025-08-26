@@ -8,7 +8,7 @@ export default function SecureSectionTransferEdge() {
 
   return (
     <div
-      className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full h-screen snap-start cursor-pointer"
+      className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full min-h-screen snap-start cursor-pointer"
       onClick={() => setActiveCoin((prev) => (prev + 1) % 3)}
     >
       <FadeInSection
@@ -61,14 +61,14 @@ export default function SecureSectionTransferEdge() {
               transform: `translateY(${640 - (activeCoin + 1) * 320}px)`,
             }}
           >
-            <div className="flex justify-center items-center w-full h-[320px] text-[128px] text-center">
+            <div className="flex justify-center items-center w-full h-[320px] text-[40px] md:text-[128px] text-center">
               powerful <br /> integration
             </div>
-            <div className="flex justify-center items-center w-full h-[320px] text-[128px] text-center">
+            <div className="flex justify-center items-center w-full h-[320px] text-[40px] md:text-[128px] text-center">
               for
               <br /> non-custodial
             </div>
-            <div className="flex justify-center items-center w-full h-[320px] text-[128px] text-center">
+            <div className="flex justify-center items-center w-full h-[320px] text-[40px] md:text-[128px] text-center">
               wallet <br /> providers
             </div>
           </div>

@@ -10,20 +10,18 @@ import Image from "next/image";
 import { cn, scrollToTop } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import BurgerSvg from "public/burger.svg?react";
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const navigation = [
     { name: "BusinessSuite", link: "/business-suite" },
     { name: "TransferEdge", link: "/transfer-edge" },
-    { name: "Documentation", link: "/documentation" },
+    {
+      name: "Documentation",
+      link: "https://docs.transatron.io/docs/Overview",
+      target: "_blank",
+    },
     { name: "Blog", link: "/blog" },
   ];
 
@@ -34,11 +32,10 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "px-10 top-0 lg:pt-0 right-0 bg-primary w-full left-0 z-30 fixed flex justify-between items-center mx-auto lg:h-20 h-25 transition-all duration-200",
-        isScrolled && "backdrop-blur-xs"
+        "px-4 md:px-10 top-0 lg:pt-0 right-0 bg-primary w-full left-0 z-30 sticky flex justify-between items-center mx-auto lg:h-20 h-25 transition-all duration-200"
       )}
     >
-      <div className="flex justify-between items-center mx-auto w-full max-w-[1360px]">
+      <div className="flex justify-between items-center gap-4 mx-auto w-full max-w-[1360px]">
         <Link href="/" className="flex items-center" onClick={handleLogoClick}>
           <Image
             src="/logo.svg"
@@ -55,6 +52,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.link}
+                target={item.target}
                 className={cn(
                   "relative hover:bg-accent! px-4 rounded-full py-2  text-white  text-center text-lg",
                   { "text-white bg-accent": item.link === pathname }
@@ -90,11 +88,11 @@ export default function Header() {
         className="lg:hidden flex justify-center items-center hover:bg-primary/30 border border-primary size-10 transition-all duration-300 cursor-pointer"
         onClick={() => setOpen(true)}
       >
-        <Image src="/burger.svg" alt="Burger" width={20} height={20} />
+        <BurgerSvg className="text-white" />
       </button>
 
       <Drawer open={open} onOpenChange={setOpen} direction="right">
-        <DrawerContent className="flex flex-col justify-between bg-[#0B160F] border-none! w-full!">
+        <DrawerContent className="flex flex-col justify-between bg-primary border-none! w-full!">
           <DrawerHeader>
             <DrawerTitle className="flex justify-between items-center px-6 pt-5">
               <Image
@@ -121,7 +119,7 @@ export default function Header() {
                   href={item.link}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "relative hover:bg-[#0DEC89]/10 px-4 rounded-full py-2 w-25 text-white active:text-white text-center text-lg",
+                    "relative hover:bg-accent px-4 rounded-full py-2  text-white active:text-white text-center text-lg",
                     { "text-white": item.link === pathname }
                   )}
                 >
@@ -146,17 +144,10 @@ export default function Header() {
           <DrawerFooter className="flex-col gap-4 mx-10 mt-0!">
             <Button
               variant="default"
-              className="px-4! py-3.5! w-full h-12 text-lg leading-5"
+              className="hover:bg-transparent shadow-none px-4! py-3.5! border border-white hover:border-transparent rounded-full h-12 text-lg leading-5 bg-accent-dark"
               onClick={() => {}}
             >
-              Request Demo
-            </Button>
-            <Button
-              variant="destructive"
-              className="px-4! py-3.5! h-12 text-lg leading-5"
-              onClick={() => {}}
-            >
-              Under Attack?
+              Request a quote
             </Button>
           </DrawerFooter>
         </DrawerContent>

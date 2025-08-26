@@ -8,7 +8,7 @@ export default function SecureSectionBusinessSuite() {
 
   return (
     <div
-      className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full h-screen snap-start cursor-pointer"
+      className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full min-h-screen snap-start cursor-pointer"
       onClick={() => setActiveCoin((prev) => (prev + 1) % 4)}
     >
       <FadeInSection
@@ -69,7 +69,7 @@ export default function SecureSectionBusinessSuite() {
         />
         <div className="z-10 flex justify-center items-center h-[280px] overflow-hidden">
           <div
-            className="font-black text-[128px] uppercase whitespace-nowrap transition-transform duration-700 ease-in-out text-accent-dark"
+            className="font-black text-[40px] md:text-[128px] uppercase whitespace-nowrap transition-transform duration-700 ease-in-out text-accent-dark"
             style={{
               transform: `translateY(${740 - (activeCoin + 1) * 280}px)`,
             }}

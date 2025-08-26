@@ -204,10 +204,10 @@ function BlogIndexInner() {
     <div className="relative pt-37 pb-18.5 w-full min-h-screen">
       <FadeInSection
         triggerOnMount
-        className="relative flex flex-col gap-6 mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[1.6px]"
+        className="relative flex flex-col gap-6 mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[0.6px]"
       >
         <div className="flex flex-col gap-10 text-center">
-          <h1 className="mb-4 font-bold text-[54px] text-white leading-16 tracking-[1.6px]">
+          <h1 className="mb-4 font-bold text-[54px] text-white leading-16 tracking-[0.6px]">
             Our Blog
           </h1>
           <div className="flex flex-row flex-wrap gap-4">
@@ -270,7 +270,7 @@ function BlogIndexInner() {
                       <div className="flex flex-wrap items-center gap-4">
                         {post.categories.map((v) => (
                           <p
-                            className="text-white text-sm uppercase leading-5 tracking-[1.6px]"
+                            className="text-white text-sm uppercase leading-5 tracking-[0.6px]"
                             key={v.name}
                           >
                             <span className="text-white">#</span>
@@ -279,11 +279,11 @@ function BlogIndexInner() {
                         ))}
                       </div>
                     )}
-                    <h3 className="font-bold text-white group-hover:text-white text-2xl line-clamp-2 leading-7 tracking-[1.6px]">
+                    <h3 className="font-bold text-white group-hover:text-white text-2xl line-clamp-2 leading-7 tracking-[0.6px]">
                       {post.title}
                     </h3>
                     {post.date && (
-                      <p className="text-white text-sm leading-5 tracking-[1.6px]">
+                      <p className="text-white text-sm leading-5 tracking-[0.6px]">
                         {new Date(post.date)
                           .toLocaleDateString("en-GB", {
                             day: "2-digit",

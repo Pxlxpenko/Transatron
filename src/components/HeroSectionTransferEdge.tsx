@@ -4,16 +4,16 @@ import Image from "next/image";
 
 export default function HeroSectionTransferEdge() {
   return (
-    <div className="flex flex-col justify-center items-center pt-[134px] w-full h-screen snap-start">
+    <div className="flex flex-col justify-center items-center mx-auto px-5 md:px-10 pt-[100px] md:pt-[40px] pb-5 w-full max-w-[1360px] min-h-screen snap-start">
       <FadeInSection
         triggerOnMount
-        className="relative flex justify-between gap-6 mx-auto mb-15 p-14 rounded-[48px] w-full max-w-[1360px] bg-accent-pink"
+        className="relative flex lg:flex-row flex-col-reverse justify-between items-center gap-6 mx-auto p-10 md:p-14 rounded-[48px] w-full bg-accent-pink"
       >
-        <div className="flex flex-col gap-10.5 max-w-[748px]">
-          <h1 className="font-black text-white text-8xl uppercase">
+        <div className="flex flex-col gap-10.5 lg:max-w-[748px]">
+          <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl uppercase">
             Transfer edge
           </h1>
-          <p className="font-bold text-[40px] text-white leading-[130%]">
+          <p className="font-bold text-[28px] text-white md:text-[40px] leading-[130%]">
             Cheaper and efficient payments integration for non-custodial wallets
           </p>
           <Button

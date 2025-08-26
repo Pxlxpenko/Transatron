@@ -29,7 +29,6 @@ function TransferEdgeInner() {
       <div ref={keyFeaturesRef}>
         <KeyFeaturesSectionTransferEdge />
       </div>
-      <Footer />
     </div>
   );
 }
