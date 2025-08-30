@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 
-import XIconSvg from "@/assets/xIcon.svg?react";
+import XIconSvg from "public/xIcon.svg?react";
 
 import { cn } from "@/lib/utils";
 

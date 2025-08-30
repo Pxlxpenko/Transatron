@@ -12,6 +12,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import BurgerSvg from "public/burger.svg?react";
+import QuoteDialog from "./QuoteDialog";
 
 export default function Header() {
   const navigation = [
@@ -27,6 +28,7 @@ export default function Header() {
 
   const handleLogoClick = () => scrollToTop();
   const [open, setOpen] = useState(false);
+  const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
   const pathname = usePathname();
 
   return (
@@ -78,7 +80,7 @@ export default function Header() {
           <Button
             variant="default"
             className="hover:bg-transparent shadow-none px-4! py-3.5! border border-white hover:border-transparent rounded-full h-12 text-lg leading-5 bg-accent-dark"
-            onClick={() => {}}
+            onClick={() => setQuoteDialogOpen(true)}
           >
             Request a quote
           </Button>
@@ -145,13 +147,17 @@ export default function Header() {
             <Button
               variant="default"
               className="hover:bg-transparent shadow-none px-4! py-3.5! border border-white hover:border-transparent rounded-full h-12 text-lg leading-5 bg-accent-dark"
-              onClick={() => {}}
+              onClick={() => {
+                setOpen(false);
+                setQuoteDialogOpen(true);
+              }}
             >
               Request a quote
             </Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
+      <QuoteDialog open={quoteDialogOpen} setOpen={setQuoteDialogOpen} />
     </header>
   );
 }
