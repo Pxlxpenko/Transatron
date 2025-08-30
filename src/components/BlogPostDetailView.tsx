@@ -100,7 +100,10 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
             />
           </div>
         )}
-        <div className="flex flex-row justify-center gap-12 bg-white -mx-[10000px] py-10">
+      </FadeInSection>
+
+      <section className="bg-white py-10">
+        <div className="flex lg:flex-row flex-col justify-center gap-12 mx-auto px-10 w-full max-w-[1360px]">
           {post.content && (
             <PortableTextRenderer
               value={post.content}
@@ -140,6 +143,12 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
             ))}
           </div>
         </div>
+      </section>
+
+      <FadeInSection
+        triggerOnMount
+        className="relative flex flex-col gap-8 mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[0.6px]"
+      >
         <div className="flex flex-col gap-6">
           <Link
             href="/blog"

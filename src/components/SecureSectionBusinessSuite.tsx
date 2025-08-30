@@ -8,65 +8,65 @@ export default function SecureSectionBusinessSuite() {
 
   return (
     <div
-      className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full min-h-screen snap-start cursor-pointer"
+      className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full min-h-screen overflow-hidden snap-start cursor-pointer"
       onClick={() => setActiveCoin((prev) => (prev + 1) % 4)}
     >
+      <Image
+        src="/coins1bg.svg"
+        alt="Coins"
+        width={1173}
+        height={582}
+        className={cn(
+          "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+          {
+            "opacity-100": activeCoin === 0,
+            "opacity-0": activeCoin !== 0,
+          }
+        )}
+      />
+      <Image
+        src="/coins2bg.svg"
+        alt="Coins"
+        width={1173}
+        height={582}
+        className={cn(
+          "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+          {
+            "opacity-100": activeCoin === 1,
+            "opacity-0": activeCoin !== 1,
+          }
+        )}
+      />
+      <Image
+        src="/coins3bg.svg"
+        alt="Coins"
+        width={1173}
+        height={582}
+        className={cn(
+          "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+          {
+            "opacity-100": activeCoin === 2,
+            "opacity-0": activeCoin !== 2,
+          }
+        )}
+      />
+      <Image
+        src="/coins4bg.svg"
+        alt="Coins"
+        width={1173}
+        height={582}
+        className={cn(
+          "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+          {
+            "opacity-100": activeCoin === 3,
+            "opacity-0": activeCoin !== 3,
+          }
+        )}
+      />
       <FadeInSection
         triggerOnMount
-        className="relative flex flex-col justify-center items-center px-10 w-full max-w-[1360px] h-full"
+        className="z-10 relative flex flex-col justify-center items-center px-10 w-full max-w-[1360px] h-full min-h-screen"
       >
-        <Image
-          src="/coins1bg.svg"
-          alt="Coins"
-          width={1173}
-          height={582}
-          className={cn(
-            "absolute inset-0 w-full h-full transition-opacity  duration-1000",
-            {
-              "opacity-100": activeCoin === 0,
-              "opacity-0": activeCoin !== 0,
-            }
-          )}
-        />
-        <Image
-          src="/coins2bg.svg"
-          alt="Coins"
-          width={1173}
-          height={582}
-          className={cn(
-            "absolute inset-0 w-full h-full transition-opacity duration-1000",
-            {
-              "opacity-100": activeCoin === 1,
-              "opacity-0": activeCoin !== 1,
-            }
-          )}
-        />
-        <Image
-          src="/coins3bg.svg"
-          alt="Coins"
-          width={1173}
-          height={582}
-          className={cn(
-            "absolute inset-0 w-full h-full transition-opacity  duration-1000",
-            {
-              "opacity-100": activeCoin === 2,
-              "opacity-0": activeCoin !== 2,
-            }
-          )}
-        />{" "}
-        <Image
-          src="/coins4bg.svg"
-          alt="Coins"
-          width={1173}
-          height={582}
-          className={cn(
-            "absolute inset-0 w-full h-full transition-opacity  duration-1000",
-            {
-              "opacity-100": activeCoin === 3,
-              "opacity-0": activeCoin !== 3,
-            }
-          )}
-        />
         <div className="z-10 flex justify-center items-center h-[280px] overflow-hidden">
           <div
             className="font-black text-[40px] md:text-[128px] uppercase whitespace-nowrap transition-transform duration-700 ease-in-out text-accent-dark"
@@ -83,7 +83,7 @@ export default function SecureSectionBusinessSuite() {
             <div className="flex justify-center items-center w-full h-[280px]">
               Compliant
             </div>
-            <div className="flex justify-center items-center w-full h-[280px] text-[64px] text-center">
+            <div className="flex justify-center items-center w-full h-[280px] text-[28px] md:text-[64px] text-center">
               Crypto payments
               <br /> for your business
             </div>
