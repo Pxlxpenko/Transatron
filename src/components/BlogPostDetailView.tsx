@@ -102,7 +102,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
         )}
       </FadeInSection>
 
-      <section className="bg-white py-10">
+      <section className="bg-[#E8E4F5] py-10">
         <div className="flex lg:flex-row flex-col justify-center gap-12 mx-auto px-10 w-full max-w-[1360px]">
           {post.content && (
             <PortableTextRenderer
@@ -111,32 +111,30 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
             />
           )}
           <div className="flex flex-col gap-8 lg:w-[371px] lg:shrink-0">
-            <p className="font-bold text-white text-2xl leading-7 tracking-[0.6px]">
+            <p className="font-bold text-black text-2xl leading-7 tracking-[0.6px]">
               More articles:
             </p>
             {relatedPosts.map((v) => (
               <Link
                 href={`/blog/${v.slug.current}`}
-                className="group flex flex-col gap-[15px] p-6 border border-primary hover:border-white active:border-white transition-all duration-300 bg-accent-dark hover:bg-accent-pink active:bg-accent-pink cursor-pointer"
+                className="group flex flex-col gap-[15px] bg-[#E8E4F5] hover:bg-white p-6 border border-primary active:border-white text-black transition-all duration-300 active:bg-accent-pink cursor-pointer"
                 key={v.slug.current}
               >
                 {v.categories && v.categories.length > 0 && (
                   <div className="flex flex-wrap items-center gap-4">
                     {v.categories.map((c) => (
                       <p
-                        className="text-white text-sm uppercase leading-5 tracking-[0.6px]"
+                        className="text-sm uppercase leading-5 tracking-[0.6px]"
                         key={c.name}
                       >
-                        <span className="text-white">#</span>
+                        <span className="text-primary">#</span>
                         {c.name}
                       </p>
                     ))}
                   </div>
                 )}
-                <p className="text-white text-xl leading-7 tracking-[0.6px]">
-                  {v.title}
-                </p>
-                <time className="text-white text-sm uppercase leading-5 tracking-[0.6px]">
+                <p className="text-xl leading-7 tracking-[0.6px]">{v.title}</p>
+                <time className="text-sm uppercase leading-5 tracking-[0.6px]">
                   {v.date ? formatDate(v.date) : ""}
                 </time>
               </Link>

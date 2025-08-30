@@ -8,9 +8,9 @@ export default function Footer() {
           Copyright © 2025 Transatron.io
         </p>
         <div className="flex gap-8">
-          <Link className="text-primary-foreground" href="/privacy-policy">
+          {/* <Link className="text-primary-foreground" href="/privacy-policy">
             Privacy Policy
-          </Link>
+          </Link> */}
           <Link className="text-primary-foreground" href="/terms-of-service">
             Terms of Service
           </Link>

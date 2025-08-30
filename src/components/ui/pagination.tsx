@@ -58,8 +58,8 @@ function PaginationLink({
           variant: isActive ? "default" : "default",
           size,
         }),
-        "size-12! font-bold text-xl leading-7 border-primary border-2 bg-primary text-white hover:bg-primary hover:text-white hover:border-white transition-all duration-150",
-        isActive && "bg-accent-pink! text-white",
+        "size-12! font-bold text-xl leading-7  border-2 bg-primary text-white hover:bg-white hover:text-black border-white transition-all duration-150",
+        isActive && "bg-white! text-black",
         className
       )}
       {...props}
