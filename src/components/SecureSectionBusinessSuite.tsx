@@ -17,7 +17,7 @@ export default function SecureSectionBusinessSuite() {
         width={1173}
         height={582}
         className={cn(
-          "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+          "absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-1000",
           {
             "opacity-100": activeCoin === 0,
             "opacity-0": activeCoin !== 0,
@@ -30,7 +30,7 @@ export default function SecureSectionBusinessSuite() {
         width={1173}
         height={582}
         className={cn(
-          "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+          "absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-1000",
           {
             "opacity-100": activeCoin === 1,
             "opacity-0": activeCoin !== 1,
@@ -43,7 +43,7 @@ export default function SecureSectionBusinessSuite() {
         width={1173}
         height={582}
         className={cn(
-          "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+          "absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-1000",
           {
             "opacity-100": activeCoin === 2,
             "opacity-0": activeCoin !== 2,
@@ -56,7 +56,7 @@ export default function SecureSectionBusinessSuite() {
         width={1173}
         height={582}
         className={cn(
-          "absolute inset-0 w-full h-full object-cover transition-opacity duration-1000",
+          "absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-1000",
           {
             "opacity-100": activeCoin === 3,
             "opacity-0": activeCoin !== 3,

@@ -96,7 +96,7 @@ export default function Header() {
       <Drawer open={open} onOpenChange={setOpen} direction="right">
         <DrawerContent className="flex flex-col justify-between bg-primary border-none! w-full!">
           <DrawerHeader>
-            <DrawerTitle className="flex justify-between items-center px-6 pt-5">
+            <DrawerTitle className="flex justify-between items-center pt-5">
               <Image
                 src="/logo.svg"
                 alt="Transatron Logo"
