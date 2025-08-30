@@ -9,12 +9,16 @@ import {
   DialogHeader,
   DialogTitle,
 } from "./ui/dialog";
+import { RadioGroup, RadioGroupItem } from "./ui/radio-group";
 import InputWithLabel from "./InputWithLabel";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
 const quoteFormSchema = z.object({
   endpoints: z.number().min(1, "At least 1 endpoint is required"),
+  averageDailyTransactions: z
+    .string()
+    .min(1, "Please select average daily transactions"),
   name: z.string().min(2, "Name must be at least 2 characters"),
   companyName: z.string().min(2, "Company name must be at least 2 characters"),
   email: z.email("Please enter a valid email address"),
@@ -39,6 +43,7 @@ const QuoteDialog = ({
   const form = useForm({
     defaultValues: {
       endpoints: 1,
+      averageDailyTransactions: "",
       name: "",
       companyName: "",
       email: "",
@@ -54,6 +59,7 @@ const QuoteDialog = ({
             company_name: value.companyName || "N/A",
             email: value.email || "N/A",
             endpoints: value.endpoints ?? "N/A",
+            average_daily_transactions: value.averageDailyTransactions || "N/A",
             name: value.name || "N/A",
             message: "N/A",
             phone: "N/A",
@@ -76,7 +82,7 @@ const QuoteDialog = ({
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="p-4 lg:p-10 pt-14 border border-primary/50 rounded-[40px] w-[474px] bg-accent-dark">
+      <DialogContent className="flex flex-col justify-center sm:justify-start p-4 lg:p-10 pt-14 border border-primary/50 rounded-none sm:rounded-[40px] w-[100vw] sm:w-[474px] max-w-[474px] h-full sm:h-auto bg-accent-dark">
         {quoteSubmitted ? (
           <>
             <div className="flex flex-col gap-5 mt-5">
@@ -113,6 +119,58 @@ const QuoteDialog = ({
                 }}
                 className="space-y-4"
               >
+                <form.Field
+                  name="averageDailyTransactions"
+                  validators={{
+                    onChange: ({ value }) => {
+                      const result =
+                        quoteFormSchema.shape.averageDailyTransactions.safeParse(
+                          value
+                        );
+                      return result.success
+                        ? undefined
+                        : result.error.issues[0]?.message;
+                    },
+                  }}
+                >
+                  {(field) => (
+                    <div className="flex flex-col gap-2">
+                      <label className="peer-disabled:opacity-70 font-medium text-sm leading-none peer-disabled:cursor-not-allowed">
+                        Average number of daily transactions
+                      </label>
+                      <RadioGroup
+                        value={field.state.value}
+                        onValueChange={field.handleChange}
+                        className="gap-3 grid grid-cols-2"
+                      >
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="< 1000" id="< 1000" />
+                          <label
+                            htmlFor="1-100"
+                            className="font-normal text-sm cursor-pointer"
+                          >
+                            &lt; 1000
+                          </label>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <RadioGroupItem value="> 1000" id="> 1000" />
+                          <label
+                            htmlFor="100-500"
+                            className="font-normal text-sm cursor-pointer"
+                          >
+                            &gt; 1000
+                          </label>
+                        </div>
+                      </RadioGroup>
+                      {field.state.meta.errors && (
+                        <p className="text-destructive text-sm">
+                          {field.state.meta.errors.join(", ")}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                </form.Field>
+
                 <form.Field
                   name="name"
                   validators={{

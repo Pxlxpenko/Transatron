@@ -1,5 +1,6 @@
 import FadeInSection from "@/components/FadeInSection";
 import { Button } from "@/components/ui/button";
+import { openCalendlyPopup } from "@/lib/utils";
 
 export default function WatchInActionSectionTransferEdge() {
   return (
@@ -28,6 +29,9 @@ export default function WatchInActionSectionTransferEdge() {
         <Button
           variant="default"
           className="hover:bg-transparent shadow-none px-12! border border-white hover:border-transparent rounded-full w-fit h-14! text-2xl bg-accent-dark"
+          onClick={() =>
+            openCalendlyPopup("https://calendly.com/hello-glenn/30min")
+          }
         >
           Book a demo
         </Button>

@@ -1,5 +1,6 @@
 import FadeInSection from "@/components/FadeInSection";
 import { Button } from "@/components/ui/button";
+import { openCalendlyPopup } from "@/lib/utils";
 import Image from "next/image";
 
 export default function HeroSectionBusinessSuite() {
@@ -19,6 +20,9 @@ export default function HeroSectionBusinessSuite() {
           <Button
             variant="default"
             className="hover:bg-transparent shadow-none px-12! border border-white hover:border-transparent rounded-full w-fit h-14! text-2xl bg-accent-dark"
+            onClick={() =>
+              openCalendlyPopup("https://calendly.com/hello-glenn/30min")
+            }
           >
             Get in touch
           </Button>

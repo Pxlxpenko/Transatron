@@ -5,6 +5,7 @@ import "@/index.css";
 import { useScrollToHash } from "@/lib/utils";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { AppProps } from "next/app";
+import Script from "next/script";
 import { useEffect, useState } from "react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
@@ -19,7 +20,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <div className="w-full">
-      {/* <Script
+      <Script
         src="https://plausible.io/js/script.js"
         data-domain="agger-labs.com"
         strategy="afterInteractive"
@@ -27,7 +28,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
         strategy="afterInteractive"
-      /> */}
+      />
       <div className="flex flex-col bg-primary min-h-screen">
         <Header />
         <main className="z-[1] flex flex-col grow">

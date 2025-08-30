@@ -42,3 +42,27 @@ export const useScrollToHash = () => {
     };
   }, [router]);
 };
+
+declare global {
+  interface Window {
+    Calendly?: {
+      initPopupWidget: (options: { url: string }) => void;
+    };
+  }
+}
+
+export const openCalendlyPopup = (url: string) => {
+  if (typeof window === "undefined") return;
+  // Calendly script attaches a global object
+  const calendly = (
+    window as unknown as {
+      Calendly?: { initPopupWidget?: (opts: { url: string }) => void };
+    }
+  ).Calendly;
+  if (calendly && typeof calendly.initPopupWidget === "function") {
+    calendly.initPopupWidget({ url });
+  } else {
+    // Fallback: open in a new tab if widget not yet loaded
+    window.open(url, "_blank", "noopener,noreferrer");
+  }
+};
