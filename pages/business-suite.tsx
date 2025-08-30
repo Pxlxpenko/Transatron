@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import HeroSectionBusinessSuite from "@/components/HeroSectionBusinessSuite";
 import KeyFeaturesSectionBusinessSuite from "@/components/KeyFeaturesSectionBusinessSuite";
 import SecureSectionBusinessSuite from "@/components/SecureSectionBusinessSuite";

@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import HeroSectionTransferEdge from "@/components/HeroSectionTransferEdge";
 import KeyFeaturesSectionTransferEdge from "@/components/KeyFeaturesSectionTransferEdge";
 import SecureSectionTransferEdge from "@/components/SecureSectionTransferEdge";
