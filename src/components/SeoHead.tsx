@@ -17,14 +17,13 @@ export default function SeoHead({
   noIndex,
 }: Props) {
   const router = useRouter();
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://agger-labs.com";
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://transatron.io";
   const canonicalPath = path ?? router.asPath ?? "/";
   const canonicalUrl = `${siteUrl}${canonicalPath.startsWith("/") ? "" : "/"}${canonicalPath}`;
   const finalTitle = title ? `${title} | Transatron` : "Transatron";
   const previewTitle = "Transatron";
   const finalDescription =
-    description ??
-    "Stop ransomware, fast. Even zero-day threats. Agger runs alongside your existing tools and kills attacks before encryption begins.";
+    description ?? "Enable cheap transactions in your wallet.";
   const ogImage = imageUrl ?? `${siteUrl}/logo.jpg`;
 
   return (
