@@ -20,7 +20,7 @@ export default function Header() {
     { name: "TransferEdge", link: "/transfer-edge" },
     {
       name: "Documentation",
-      link: "https://docs.transatron.io/docs/Overview",
+      link: "https://docs.transatron.io",
       target: "_blank",
     },
     { name: "Blog", link: "/blog" },
@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "px-4 md:px-10 top-0 lg:pt-0 right-0 bg-primary w-full left-0 z-30 sticky flex justify-between items-center mx-auto lg:h-20 h-25 transition-all duration-200"
+        "top-0 right-0 left-0 z-30 sticky flex justify-between items-center bg-primary mx-auto px-4 md:px-10 lg:pt-0 w-full h-25 lg:h-20 transition-all duration-200"
       )}
     >
       <div className="flex justify-between items-center gap-4 mx-auto w-full max-w-[1360px]">
@@ -47,7 +47,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className={cn("gap-5 lg:flex hidden")}>
+        <nav className={cn("hidden lg:flex gap-5")}>
           {navigation.map(
             (item) => (
               // item.link ? (
@@ -56,7 +56,7 @@ export default function Header() {
                 href={item.link}
                 target={item.target}
                 className={cn(
-                  "relative hover:bg-accent! px-4 rounded-full py-2  text-white  text-center text-lg",
+                  "relative hover:bg-accent! px-4 py-2 rounded-full text-white text-lg text-center",
                   { "text-white bg-accent": item.link === pathname }
                 )}
               >
@@ -121,7 +121,7 @@ export default function Header() {
                   href={item.link}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "relative hover:bg-accent px-4 rounded-full py-2  text-white active:text-white text-center text-lg",
+                    "relative hover:bg-accent px-4 py-2 rounded-full text-white active:text-white text-lg text-center",
                     { "text-white": item.link === pathname }
                   )}
                 >
