@@ -28,7 +28,7 @@ export default function WatchInActionSectionBusinessSuite() {
         </div>
         <Button
           variant="default"
-          className="hover:bg-transparent shadow-none px-12! border border-white hover:border-transparent rounded-full w-fit h-14! text-2xl bg-accent-dark"
+          className="hover:bg-[#1E1E1E] shadow-none px-12! border border-white rounded-full w-fit h-14! text-2xl bg-accent-dark"
           onClick={() =>
             openCalendlyPopup("https://calendly.com/hello-glenn/30min")
           }

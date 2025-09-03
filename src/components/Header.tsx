@@ -79,7 +79,7 @@ export default function Header() {
         <div className="hidden lg:flex flex-row gap-4">
           <Button
             variant="default"
-            className="hover:bg-transparent shadow-none px-4! py-3.5! border border-white hover:border-transparent rounded-full h-12 text-lg leading-5 bg-accent-dark"
+            className="hover:bg-[#1E1E1E] shadow-none px-4! py-3.5! border border-white rounded-full h-12 text-lg leading-5 bg-accent-dark"
             onClick={() => setQuoteDialogOpen(true)}
           >
             Request a quote
@@ -146,7 +146,7 @@ export default function Header() {
           <DrawerFooter className="flex-col gap-4 mx-10 mt-0!">
             <Button
               variant="default"
-              className="hover:bg-transparent shadow-none px-4! py-3.5! border border-white hover:border-transparent rounded-full h-12 text-lg leading-5 bg-accent-dark"
+              className="hover:bg-[#1E1E1E] shadow-none px-4! py-3.5! border border-white rounded-full h-12 text-lg leading-5 bg-accent-dark"
               onClick={() => {
                 setOpen(false);
                 setQuoteDialogOpen(true);

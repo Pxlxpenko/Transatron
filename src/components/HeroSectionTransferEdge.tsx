@@ -19,7 +19,7 @@ export default function HeroSectionTransferEdge() {
           </p>
           <Button
             variant="default"
-            className="bg-transparent hover:bg-transparent shadow-none px-12! border border-white hover:border-transparent rounded-full w-fit h-14! text-2xl"
+            className="bg-transparent hover:bg-[#1E1E1E] shadow-none px-12! border border-white rounded-full w-fit h-14! text-2xl"
             onClick={() =>
               openCalendlyPopup("https://calendly.com/hello-glenn/30min")
             }
