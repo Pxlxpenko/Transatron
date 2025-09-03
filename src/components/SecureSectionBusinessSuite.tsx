@@ -18,7 +18,7 @@ export default function SecureSectionBusinessSuite() {
           <br /> for your business
         </>
       ),
-      textClassname: "md:text-[64px]",
+      textClassname: "md:text-[72px]",
     },
   ];
 
