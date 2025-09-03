@@ -11,7 +11,7 @@ export default function HeroSectionTransferEdge() {
         className="relative flex lg:flex-row flex-col-reverse justify-between items-center gap-6 mx-auto p-10 md:p-14 rounded-[48px] w-full bg-accent-pink"
       >
         <div className="flex flex-col gap-10.5 lg:max-w-[748px]">
-          <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl uppercase">
+          <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl! uppercase">
             Transfer edge
           </h1>
           <p className="font-bold text-[28px] text-white md:text-[40px] leading-[130%]">

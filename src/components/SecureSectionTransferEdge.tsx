@@ -1,4 +1,4 @@
-import AnimatedSecureSection from "@/components/AnimatedSecureSection";
+import SecureStep from "./SecureStep";
 
 export default function SecureSectionTransferEdge() {
   const allTexts = [
@@ -29,11 +29,12 @@ export default function SecureSectionTransferEdge() {
   const allCoinImages = ["/coins1bg.svg", "/coins2bg.svg", "/coins3bg.svg"];
 
   return (
-    <div className="bg-white snap-mandatory snap-y">
-      <AnimatedSecureSection
+    <div className="bg-white snap-start">
+      <SecureStep
+        totalSteps={3}
+        textColor="text-accent-pink"
         allTexts={allTexts}
         allCoinImages={allCoinImages}
-        textColor="text-accent-pink"
       />
     </div>
   );

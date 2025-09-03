@@ -55,7 +55,7 @@ export default function KeyFeaturesSectionBusinessSuite() {
           {features.map((feature, i) => (
             <div
               className={cn(
-                "flex flex-col justify-between items-center gap-10 md:px-12.5 px-2 w-full",
+                "flex flex-col justify-between items-center gap-10 px-2 md:px-12.5 w-full",
                 {
                   "md:flex-row-reverse": i % 2 === 0,
                   "md:flex-row": i % 2 !== 0,

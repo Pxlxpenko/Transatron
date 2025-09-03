@@ -35,7 +35,7 @@ export default function IndexPage() {
                 A crypto payment one-stop
                 <br /> shop for businesses
               </p>
-              <h1 className="max-w-[480px] font-black text-white sm:text-5xl text-7xl md:text-8xl! uppercase group-hover:scale-102 transition-all duration-150">
+              <h1 className="max-w-[480px] font-black text-white sm:text-5xl text-7xl md:text-8xl!! uppercase group-hover:scale-102 transition-all duration-150">
                 Business Suite
               </h1>
             </div>
@@ -63,7 +63,7 @@ export default function IndexPage() {
 
           <div className="top-0 right-0 z-20 absolute flex flex-col gap-4">
             <div className="flex flex-col items-end gap-4 p-15">
-              <h1 className="max-w-[540px] font-black text-white sm:text-5xl text-7xl md:text-8xl! text-end uppercase group-hover:scale-102! transition-all duration-150">
+              <h1 className="max-w-[540px] font-black text-white sm:text-5xl text-7xl md:text-8xl!! text-end uppercase group-hover:scale-102! transition-all duration-150">
                 Transfer Edge
               </h1>
               <p className="font-bold text-white xl:text-[28px] text-base text-end leading-[110%]">
@@ -80,7 +80,7 @@ export default function IndexPage() {
           className="group flex flex-col rounded-2xl bg-accent-pink"
         >
           <div className="flex flex-col gap-4 p-10 md:p-15">
-            <h1 className="font-black text-[32px] text-white sm:text-[58px] md:text-8xl! uppercase leading-none group-hover:scale-102! transition-all duration-150">
+            <h1 className="font-black text-[32px] text-white sm:text-[58px] md:text-8xl!! uppercase leading-none group-hover:scale-102! transition-all duration-150">
               Transfer Edge
             </h1>
             <p className="font-bold text-white md:text-[28px] text-base leading-[110%]">
@@ -94,7 +94,7 @@ export default function IndexPage() {
           className="group flex flex-col bg-accent rounded-2xl"
         >
           <div className="flex flex-col gap-4 p-10 md:p-15">
-            <h1 className="font-black text-[32px] text-white sm:text-[58px] md:text-8xl! uppercase leading-none group-hover:scale-102 transition-all duration-150">
+            <h1 className="font-black text-[32px] text-white sm:text-[58px] md:text-8xl!! uppercase leading-none group-hover:scale-102 transition-all duration-150">
               Business Suite
             </h1>
             <p className="max-w-[400px] font-bold text-[#DBD2FF] md:text-[28px] text-base leading-[110%]">

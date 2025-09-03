@@ -155,3 +155,25 @@ body {
   scroll-behavior: smooth;
   --tw-prose-bullets: "#ffffff";
 }
+
+/* Ensuring smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Main scroll container - apply to html for better browser support */
+html.snap-enabled {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+html.snap-disabled {
+  scroll-snap-type: none;
+}
+
+/* Snap points for sections */
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+}

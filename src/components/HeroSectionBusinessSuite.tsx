@@ -11,7 +11,7 @@ export default function HeroSectionBusinessSuite() {
         className="relative flex xl:flex-row flex-col-reverse justify-between gap-6 mx-auto p-14 rounded-[48px] w-full bg-accent-dark"
       >
         <div className="flex flex-col gap-10.5">
-          <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl uppercase">
+          <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl! uppercase">
             Business Suite
           </h1>
           <p className="font-bold text-[40px] text-white leading-[130%]">

@@ -9,7 +9,7 @@ export default function WatchInActionSectionTransferEdge() {
         triggerOnMount
         className="relative flex flex-col items-center gap-16 mx-auto px-10 md:px-25 w-full max-w-[1360px]"
       >
-        <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl text-center uppercase">
+        <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl! text-center uppercase">
           WATCH IN ACTION
         </h1>
         <div className="flex lg:flex-row flex-col gap-10 w-full">

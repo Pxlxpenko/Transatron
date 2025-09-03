@@ -1,4 +1,4 @@
-import AnimatedSecureSection from "@/components/AnimatedSecureSection";
+import SecureStep from "./SecureStep";
 
 export default function SecureSectionBusinessSuite() {
   const allTexts = [
@@ -30,11 +30,12 @@ export default function SecureSectionBusinessSuite() {
   ];
 
   return (
-    <div className="bg-white snap-mandatory snap-y">
-      <AnimatedSecureSection
+    <div className="bg-white snap-start">
+      <SecureStep
+        totalSteps={4}
+        textColor="text-accent-dark"
         allTexts={allTexts}
         allCoinImages={allCoinImages}
-        textColor="text-accent-dark"
       />
     </div>
   );
