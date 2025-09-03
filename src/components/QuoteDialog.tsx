@@ -15,7 +15,6 @@ import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 
 const quoteFormSchema = z.object({
-  endpoints: z.number().min(1, "At least 1 endpoint is required"),
   averageDailyTransactions: z
     .string()
     .min(1, "Please select average daily transactions"),
@@ -42,7 +41,6 @@ const QuoteDialog = ({
 
   const form = useForm({
     defaultValues: {
-      endpoints: 1,
       averageDailyTransactions: "",
       name: "",
       companyName: "",
@@ -56,13 +54,10 @@ const QuoteDialog = ({
           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
           {
             topic: "Pricing quote",
-            company_name: value.companyName || "N/A",
-            email: value.email || "N/A",
-            endpoints: value.endpoints ?? "N/A",
-            average_daily_transactions: value.averageDailyTransactions || "N/A",
-            name: value.name || "N/A",
-            message: "N/A",
-            phone: "N/A",
+            company_name: value.companyName,
+            email: value.email,
+            average_daily_transactions: value.averageDailyTransactions,
+            name: value.name,
           }
         );
 

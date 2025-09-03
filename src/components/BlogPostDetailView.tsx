@@ -30,7 +30,7 @@ export default function BlogPostDetailView({ post, morePosts }: Props) {
   );
 
   return (
-    <div className="relative flex flex-col gap-8 pt-25 pb-12.5 w-full max-w-dvw min-h-screen overflow-hidden">
+    <div className="relative flex flex-col gap-8 lg:pt-25 pb-12.5 w-full max-w-dvw min-h-screen overflow-hidden">
       <FadeInSection
         triggerOnMount
         className="relative flex flex-col gap-8 mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[0.6px]"

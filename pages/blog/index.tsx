@@ -201,7 +201,7 @@ function BlogIndexInner() {
   }
 
   return (
-    <div className="relative pt-37 pb-18.5 w-full min-h-screen">
+    <div className="relative lg:pt-37 pb-18.5 w-full min-h-screen">
       <FadeInSection
         triggerOnMount
         className="relative flex flex-col gap-6 mx-auto px-10 w-full max-w-[1360px] text-sm leading-5 tracking-[0.6px]"
@@ -213,7 +213,7 @@ function BlogIndexInner() {
           <div className="flex flex-row flex-wrap gap-4">
             <Button
               className={cn(
-                "text-white text-lg px-6! hover:bg-accent-pink h-12! border-2 border-transparent bg-accent-dark",
+                "px-6! border-2 border-transparent h-12! text-white text-lg bg-accent-dark hover:bg-accent-pink",
                 selectedCategory === "" &&
                   "text-white bg-accent-pink  border-white"
               )}
@@ -227,7 +227,7 @@ function BlogIndexInner() {
                 key={category._id}
                 variant="default"
                 className={cn(
-                  "text-white text-lg font-medium hover:bg-accent-pink px-6! h-12! bg-accent-dark border-2 border-transparent",
+                  "px-6! border-2 border-transparent h-12! font-medium text-white text-lg bg-accent-dark hover:bg-accent-pink",
                   selectedCategory === category._id &&
                     "text-white bg-accent-pink  border-white"
                 )}

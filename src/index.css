@@ -153,4 +153,5 @@ body {
   font-optical-sizing: auto;
   font-display: swap;
   scroll-behavior: smooth;
+  --tw-prose-bullets: "#ffffff";
 }
