@@ -2,10 +2,24 @@ import AnimatedSecureSection from "@/components/AnimatedSecureSection";
 
 export default function SecureSectionBusinessSuite() {
   const allTexts = [
-    "Secure",
-    "Simple",
-    "Compliant",
-    "Crypto payments for your business",
+    {
+      text: "Secure",
+    },
+    {
+      text: "Simple",
+    },
+    {
+      text: "Compliant",
+    },
+    {
+      text: (
+        <>
+          Crypto payments
+          <br /> for your business
+        </>
+      ),
+      textClassname: "md:text-[64px]",
+    },
   ];
 
   const allCoinImages = [

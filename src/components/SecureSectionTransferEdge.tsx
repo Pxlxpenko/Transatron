@@ -2,9 +2,28 @@ import AnimatedSecureSection from "@/components/AnimatedSecureSection";
 
 export default function SecureSectionTransferEdge() {
   const allTexts = [
-    "powerful integration",
-    "for non-custodial",
-    "wallet providers",
+    {
+      text: (
+        <>
+          powerful
+          <br /> integration
+        </>
+      ),
+    },
+    {
+      text: (
+        <>
+          for <br /> non-custodial
+        </>
+      ),
+    },
+    {
+      text: (
+        <>
+          wallet <br /> providers
+        </>
+      ),
+    },
   ];
 
   const allCoinImages = ["/coins1bg.svg", "/coins2bg.svg", "/coins3bg.svg"];
