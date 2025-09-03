@@ -10,18 +10,23 @@ import { useScrollSnapKeyFeatures } from "@/hooks/useScrollSnapKeyFeatures";
 function BusinessSuiteInner() {
   const keyFeaturesRef = useRef<HTMLDivElement | null>(null);
   const watchRef = useRef<HTMLDivElement | null>(null);
+  const secureRef = useRef<HTMLDivElement | null>(null);
 
   useScrollSnapKeyFeatures({
     keyFeaturesRef,
     watchRef,
     rootMargin: "80% 0px 80% 0px",
     downDelayMs: 250,
+    freeScrollRefs: [],
+    secureRefs: [secureRef],
   });
 
   return (
     <div className="relative w-full">
       <HeroSectionBusinessSuite />
-      <SecureSectionBusinessSuite />
+      <div ref={secureRef}>
+        <SecureSectionBusinessSuite />
+      </div>
       <div ref={watchRef}>
         <WatchInActionSectionBusinessSuite />
       </div>

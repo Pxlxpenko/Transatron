@@ -1,95 +1,27 @@
-import FadeInSection from "@/components/FadeInSection";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
-import { useState } from "react";
+import AnimatedSecureSection from "@/components/AnimatedSecureSection";
 
 export default function SecureSectionBusinessSuite() {
-  const [activeCoin, setActiveCoin] = useState(0);
+  const allTexts = [
+    "Secure",
+    "Simple",
+    "Compliant",
+    "Crypto payments for your business",
+  ];
+
+  const allCoinImages = [
+    "/coins1bg.svg",
+    "/coins2bg.svg",
+    "/coins3bg.svg",
+    "/coins4bg.svg",
+  ];
 
   return (
-    <div
-      className="relative flex justify-center items-center gap-6 bg-white mx-auto w-full min-h-screen overflow-hidden snap-start cursor-pointer"
-      onClick={() => setActiveCoin((prev) => (prev + 1) % 4)}
-    >
-      <Image
-        src="/coins1bg.svg"
-        alt="Coins"
-        width={1173}
-        height={582}
-        className={cn(
-          "absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-1000",
-          {
-            "opacity-100": activeCoin === 0,
-            "opacity-0": activeCoin !== 0,
-          }
-        )}
+    <div className="bg-white snap-mandatory snap-y">
+      <AnimatedSecureSection
+        allTexts={allTexts}
+        allCoinImages={allCoinImages}
+        textColor="text-accent-dark"
       />
-      <Image
-        src="/coins2bg.svg"
-        alt="Coins"
-        width={1173}
-        height={582}
-        className={cn(
-          "absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-1000",
-          {
-            "opacity-100": activeCoin === 1,
-            "opacity-0": activeCoin !== 1,
-          }
-        )}
-      />
-      <Image
-        src="/coins3bg.svg"
-        alt="Coins"
-        width={1173}
-        height={582}
-        className={cn(
-          "absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-1000",
-          {
-            "opacity-100": activeCoin === 2,
-            "opacity-0": activeCoin !== 2,
-          }
-        )}
-      />
-      <Image
-        src="/coins4bg.svg"
-        alt="Coins"
-        width={1173}
-        height={582}
-        className={cn(
-          "absolute inset-0 w-full h-full object-contain sm:object-cover transition-opacity duration-1000",
-          {
-            "opacity-100": activeCoin === 3,
-            "opacity-0": activeCoin !== 3,
-          }
-        )}
-      />
-      <FadeInSection
-        triggerOnMount
-        className="z-10 relative flex flex-col justify-center items-center px-10 w-full max-w-[1360px] h-full min-h-screen"
-      >
-        <div className="z-10 flex justify-center items-center h-[280px] overflow-hidden">
-          <div
-            className="font-black text-[40px] md:text-[128px] uppercase whitespace-nowrap transition-transform duration-700 ease-in-out text-accent-dark"
-            style={{
-              transform: `translateY(${740 - (activeCoin + 1) * 280}px)`,
-            }}
-          >
-            <div className="flex justify-center items-center w-full h-[280px]">
-              Secure
-            </div>
-            <div className="flex justify-center items-center w-full h-[280px]">
-              Simple
-            </div>
-            <div className="flex justify-center items-center w-full h-[280px]">
-              Compliant
-            </div>
-            <div className="flex justify-center items-center w-full h-[280px] text-[28px] md:text-[64px] text-center">
-              Crypto payments
-              <br /> for your business
-            </div>
-          </div>
-        </div>
-      </FadeInSection>
     </div>
   );
 }
