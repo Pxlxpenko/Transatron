@@ -48,14 +48,14 @@ export default function KeyFeaturesSectionBusinessSuite() {
         triggerOnMount
         className="relative flex flex-col items-center mx-auto px-10 md:px-25 w-full max-w-[1360px]"
       >
-        <div className="flex flex-col justify-center items-center gap-10 w-full max-w-[924px]">
+        <div className="flex flex-col justify-center items-center gap-20 w-full max-w-[924px]">
           <h1 className="font-black text-[40px] text-white sm:text-8xl text-center uppercase">
             Key features
           </h1>
           {features.map((feature, i) => (
             <div
               className={cn(
-                "flex flex-col justify-between items-center gap-10 px-2 md:px-12.5 w-full",
+                "flex flex-col justify-between items-center gap-10 md:gap-27 px-2 md:px-12.5 w-full",
                 {
                   "md:flex-row-reverse": i % 2 === 0,
                   "md:flex-row": i % 2 !== 0,

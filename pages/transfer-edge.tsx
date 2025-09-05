@@ -6,7 +6,6 @@ import WatchInActionSectionTransferEdge from "@/components/WatchInActionSectionT
 import FadeInSection from "@/components/FadeInSection";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
-import { scrollToTop } from "@/lib/utils";
 
 function TransferEdgeInner() {
   const heroRef = useRef<HTMLDivElement>(null);

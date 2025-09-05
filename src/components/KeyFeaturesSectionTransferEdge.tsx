@@ -49,7 +49,7 @@ export default function KeyFeaturesSectionTransferEdge() {
           triggerOnMount
           className="relative flex flex-col items-center mx-auto px-10 md:px-25 w-full max-w-[1360px]"
         >
-          <div className="flex flex-col justify-center items-center gap-10 w-full max-w-[924px] min-h-screen">
+          <div className="flex flex-col justify-center items-center gap-20 w-full max-w-[924px] min-h-screen">
             <h1 className="font-black text-[40px] text-white sm:text-8xl text-center uppercase">
               benefits for your users
             </h1>
