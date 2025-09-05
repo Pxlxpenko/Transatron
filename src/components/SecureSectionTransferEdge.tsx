@@ -36,6 +36,7 @@ export default function SecureSectionTransferEdge() {
         endFrame={96}
         keyStep={1 / 3}
         frames={[0, 48, 96]}
+        className="scale-125 md:scale-100"
       />
     </div>
   );

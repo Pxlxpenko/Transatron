@@ -31,7 +31,7 @@ export default function SecureSectionBusinessSuite() {
 
   return (
     <div className="bg-white snap-start">
-      <SecureStep frames={[0, 30, 56, 93]} />
+      <SecureStep frames={[0, 30, 56, 93]} className="scale-150 md:scale-100" />
     </div>
   );
 }

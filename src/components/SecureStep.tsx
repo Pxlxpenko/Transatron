@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import Lottie, { type LottieRefCurrentProps } from "lottie-react";
 import defaultAnimationData from "@/assets/transatron1.json";
+import { cn } from "@/lib/utils";
 
 type SecureStepProps = {
   animationData?: object;
@@ -10,6 +11,7 @@ type SecureStepProps = {
   endFrame?: number;
   keyStep?: number;
   frames?: readonly number[] | number[];
+  className?: string;
 };
 
 export default function SecureStep({
@@ -17,6 +19,7 @@ export default function SecureStep({
   startFrame,
   endFrame,
   keyStep,
+  className,
   frames: frames,
 }: SecureStepProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -199,7 +202,7 @@ export default function SecureStep({
             animationData={animationData}
             autoplay={false}
             loop={false}
-            className="w-full h-full object-contain"
+            className={cn("w-full h-full object-contain", className)}
           />
         </div>
       </div>

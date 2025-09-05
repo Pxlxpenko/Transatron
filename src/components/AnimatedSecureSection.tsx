@@ -88,7 +88,7 @@ function ParallaxSection({
           alt="Coins"
           width={1173}
           height={582}
-          className="w-full h-full object-contain sm:object-cover will-change-transform"
+          className="w-full h-full object-contain md:object-cover will-change-transform"
         />
       </motion.div>
 
@@ -98,7 +98,7 @@ function ParallaxSection({
       >
         <motion.div
           className={cn(
-            `font-black text-[40px] md:text-[128px] text-center uppercase whitespace-nowrap`,
+            `font-black text-[48px] md:text-[128px] text-center uppercase whitespace-nowrap`,
             textColor,
             textClassname
           )}

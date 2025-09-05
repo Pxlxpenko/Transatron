@@ -1,27 +1,32 @@
 import FadeInSection from "@/components/FadeInSection";
 import { Button } from "@/components/ui/button";
 import { openCalendlyPopup } from "@/lib/utils";
+import PlaySvg from "public/play.svg?react";
 
 export default function WatchInActionSectionBusinessSuite() {
   return (
     <div className="flex flex-col justify-center items-center py-15 w-full min-h-screen bg-accent-dark snap-start">
       <FadeInSection
         triggerOnMount
-        className="relative flex flex-col items-center gap-16 mx-auto px-10 md:px-25 w-full max-w-[1360px]"
+        className="relative flex flex-col items-center gap-16 mx-auto px-2.5 md:px-25 pb-5 w-full max-w-[1360px]"
       >
-        <h1 className="font-black text-[40px] text-white sm:text-[58px] md:text-8xl! text-center uppercase">
+        <h1 className="font-black text-[48px] text-white md:text-8xl! text-center uppercase">
           WATCH IN ACTION
         </h1>
         <div className="flex lg:flex-row flex-col gap-10 w-full">
-          <div className="flex flex-col gap-4 bg-white p-10 rounded-[40px] w-full">
-            <div className="bg-[#DDD4FF] rounded-[30px] w-full h-[309px]" />
-            <p className="font-bold text-[#313131] text-[32px] leading-[130%]">
+          <div className="flex flex-col gap-4 bg-white p-2.5 md:p-10 pb-5 rounded-[40px] w-full">
+            <div className="flex justify-center items-center bg-[#DDD4FF] rounded-[30px] w-full h-[309px]">
+              <PlaySvg />
+            </div>
+            <p className="font-bold text-[#313131] text-[18px] md:text-[32px] text-center leading-[130%]">
               Significant Cost Savings
             </p>
           </div>
-          <div className="flex flex-col gap-4 bg-white p-10 rounded-[40px] w-full">
-            <div className="bg-[#DDD4FF] rounded-[30px] w-full h-[309px]" />
-            <p className="font-bold text-[#313131] text-[32px] leading-[130%]">
+          <div className="flex flex-col gap-4 bg-white p-2.5 md:p-10 pb-5 rounded-[40px] w-full">
+            <div className="flex justify-center items-center bg-[#DDD4FF] rounded-[30px] w-full h-[309px]">
+              <PlaySvg />
+            </div>
+            <p className="font-bold text-[#313131] text-[18px] md:text-[32px] text-center leading-[130%]">
               Significant Cost Savings
             </p>
           </div>

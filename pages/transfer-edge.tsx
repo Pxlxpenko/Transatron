@@ -125,7 +125,11 @@ function TransferEdgeInner() {
         </FadeInSection>
       </div>
 
-      <div ref={secureRef} id="secure-section" className="snap-section">
+      <div
+        ref={secureRef}
+        id="secure-section"
+        className="bg-white snap-section"
+      >
         <FadeInSection className="flex justify-center items-center">
           <SecureSectionTransferEdge />
         </FadeInSection>

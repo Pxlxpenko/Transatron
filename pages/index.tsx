@@ -6,7 +6,7 @@ import Shape2Svg from "public/shape2.svg?react";
 
 export default function IndexPage() {
   return (
-    <div className="relative flex justify-center items-center bg-primary mx-auto px-10 w-full max-w-[1360px] grow">
+    <div className="relative flex md:justify-center items-center bg-primary mx-auto px-2.5 md:px-10 w-full max-w-[1360px] grow">
       <SeoHead title="Home" path="/" />
       <div className="hidden relative xl:flex justify-center items-center w-full max-w-[1280px] h-[536px]">
         <Link
@@ -31,11 +31,11 @@ export default function IndexPage() {
 
           <div className="z-20 relative flex w-full h-full">
             <div className="bottom-0 left-0 absolute flex flex-col gap-4 p-15">
-              <p className="max-w-[400px] font-bold text-[#DBD2FF] xl:text-[28px] text-base leading-[110%]">
+              <p className="max-w-[400px] font-bold text-[#DBD2FF] text-[22px] xl:text-[28px] leading-[110%]">
                 A crypto payment one-stop
                 <br /> shop for businesses
               </p>
-              <h1 className="max-w-[480px] font-black text-white sm:text-5xl text-7xl md:text-8xl! uppercase group-hover:scale-102 transition-all duration-150">
+              <h1 className="max-w-[480px] font-black text-[40px] text-white md:text-8xl! uppercase group-hover:scale-102 transition-all duration-150">
                 Business Suite
               </h1>
             </div>
@@ -63,7 +63,7 @@ export default function IndexPage() {
 
           <div className="top-0 right-0 z-20 absolute flex flex-col gap-4">
             <div className="flex flex-col items-end gap-4 p-15">
-              <h1 className="max-w-[540px] font-black text-white sm:text-5xl text-7xl md:text-8xl! text-end uppercase group-hover:scale-102! transition-all duration-150">
+              <h1 className="max-w-[540px] font-black text-white md:text-5xl text-7xl md:text-8xl! text-end uppercase group-hover:scale-102! transition-all duration-150">
                 Transfer Edge
               </h1>
               <p className="font-bold text-white xl:text-[28px] text-base text-end leading-[110%]">
@@ -74,16 +74,16 @@ export default function IndexPage() {
           </div>
         </Link>
       </div>
-      <div className="xl:hidden relative flex flex-col justify-center items-center gap-5">
+      <div className="xl:hidden relative flex flex-col justify-center items-center gap-5 mx-auto h-full">
         <Link
           href={"/transfer-edge"}
-          className="group flex flex-col rounded-2xl bg-accent-pink"
+          className="group flex flex-col rounded-2xl transition-all duration-150 bg-accent-pink hover:bg-accent-pink-hover"
         >
-          <div className="flex flex-col gap-4 p-10 md:p-15">
-            <h1 className="font-black text-[32px] text-white sm:text-[58px] md:text-8xl! uppercase leading-none group-hover:scale-102! transition-all duration-150">
+          <div className="flex flex-col gap-4 p-10 md:p-15 min-h-[280px]">
+            <h1 className="font-black text-[40px] text-white md:text-8xl! uppercase leading-none group-hover:scale-102! transition-all duration-150">
               Transfer Edge
             </h1>
-            <p className="font-bold text-white md:text-[28px] text-base leading-[110%]">
+            <p className="font-bold text-[22px] text-white md:text-[28px] leading-[110%]">
               Cheaper and efficient
               <br /> payments integration for <br /> non-custodial wallets
             </p>
@@ -91,13 +91,13 @@ export default function IndexPage() {
         </Link>
         <Link
           href={"/business-suite"}
-          className="group flex flex-col bg-accent rounded-2xl"
+          className="group flex flex-col bg-accent rounded-2xl transition-all duration-150 hover:bg-accent-dark-hover"
         >
-          <div className="flex flex-col gap-4 p-10 md:p-15">
-            <h1 className="font-black text-[32px] text-white sm:text-[58px] md:text-8xl! uppercase leading-none group-hover:scale-102 transition-all duration-150">
+          <div className="flex flex-col justify-center gap-4 p-10 md:p-15 min-h-[280px]">
+            <h1 className="font-black text-[40px] text-white md:text-8xl! uppercase leading-none group-hover:scale-102 transition-all duration-150">
               Business Suite
             </h1>
-            <p className="max-w-[400px] font-bold text-[#DBD2FF] md:text-[28px] text-base leading-[110%]">
+            <p className="max-w-[400px] font-bold text-[#DBD2FF] text-[22px] md:text-[28px] leading-[110%]">
               A crypto payment one-stop
               <br /> shop for businesses
             </p>

@@ -77,7 +77,7 @@ const QuoteDialog = ({
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="flex flex-col justify-center sm:justify-start p-4 lg:p-10 pt-14 border border-primary/50 rounded-none sm:rounded-[40px] w-[100vw] sm:w-[474px] max-w-[474px] h-full sm:h-auto bg-accent-dark">
+      <DialogContent className="flex flex-col justify-center md:justify-start p-4 lg:p-10 pt-14 border border-primary/50 rounded-none md:rounded-[40px] w-[100vw] md:w-[474px] max-w-[474px] h-full md:h-auto bg-accent-dark">
         {quoteSubmitted ? (
           <>
             <div className="flex flex-col gap-5 mt-5">
@@ -100,7 +100,7 @@ const QuoteDialog = ({
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="font-bold text-[40px] leading-[130%]">
+              <DialogTitle className="font-bold text-[48px] leading-[130%]">
                 Request a quote
               </DialogTitle>
             </DialogHeader>

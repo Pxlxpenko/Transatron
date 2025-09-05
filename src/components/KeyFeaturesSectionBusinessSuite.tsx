@@ -1,6 +1,7 @@
 import FadeInSection from "@/components/FadeInSection";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 const features = [
   {
@@ -43,19 +44,19 @@ const features = [
 
 export default function KeyFeaturesSectionBusinessSuite() {
   return (
-    <div className="flex flex-col justify-center items-center bg-primary py-15 w-full">
+    <div className="flex flex-col justify-center items-center bg-primary py-10 md:py-15 w-full">
       <FadeInSection
         triggerOnMount
-        className="relative flex flex-col items-center mx-auto px-10 md:px-25 w-full max-w-[1360px]"
+        className="relative flex flex-col items-center gap-[40px] md:gap-[75px] mx-auto px-4 md:px-25 w-full max-w-[1360px]"
       >
-        <div className="flex flex-col justify-center items-center gap-20 w-full max-w-[924px]">
-          <h1 className="font-black text-[40px] text-white sm:text-8xl text-center uppercase">
+        <div className="flex flex-col justify-center items-center gap-10 md:gap-20 w-full max-w-[924px]">
+          <h1 className="font-black text-[48px] text-white md:text-8xl text-center uppercase">
             Key features
           </h1>
           {features.map((feature, i) => (
             <div
               className={cn(
-                "flex flex-col justify-between items-center gap-10 md:gap-27 px-2 md:px-12.5 w-full",
+                "flex flex-col-reverse justify-between items-center gap-10 md:gap-27 md:px-12.5 w-full",
                 {
                   "md:flex-row-reverse": i % 2 === 0,
                   "md:flex-row": i % 2 !== 0,
@@ -63,10 +64,10 @@ export default function KeyFeaturesSectionBusinessSuite() {
               )}
             >
               <div className="flex flex-col gap-4">
-                <h3 className="font-bold text-white text-4xl leading-[130%]">
+                <h3 className="font-bold text-[24px] text-white md:text-4xl leading-[130%]">
                   {feature.title}
                 </h3>
-                <p className="font-normal text-white text-2xl leading-[130%]">
+                <p className="font-normal text-[18px] text-white md:text-2xl leading-[130%]">
                   {feature.description}
                 </p>
               </div>
@@ -75,10 +76,14 @@ export default function KeyFeaturesSectionBusinessSuite() {
                 alt={feature.title}
                 width={200}
                 height={200}
+                className="size-[100px] md:size-[200px]"
               />
             </div>
           ))}
         </div>
+        <Button className="hover:bg-[#1E1E1E] shadow-none px-12 border border-white rounded-full h-14! text-2xl bg-accent-dark">
+          Find out more
+        </Button>
       </FadeInSection>
     </div>
   );

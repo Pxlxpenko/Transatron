@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "top-0 right-0 left-0 z-30 sticky flex justify-between items-center bg-primary mx-auto px-4 md:px-10 lg:pt-0 w-full h-25 lg:h-20 transition-all duration-200"
+        "top-0 right-0 left-0 z-30 sticky flex justify-between items-center bg-primary mx-auto px-4 md:px-10 lg:pt-0 w-full h-18 md:h-25 lg:h-20 transition-all duration-200"
       )}
     >
       <div className="flex justify-between items-center gap-4 mx-auto w-full max-w-[1360px]">
@@ -87,30 +87,20 @@ export default function Header() {
         </div>
       </div>
       <button
-        className="lg:hidden flex justify-center items-center hover:bg-primary/30 border border-primary size-10 transition-all duration-300 cursor-pointer"
+        className="lg:hidden flex justify-center items-center hover:bg-primary/30 border border border-primary border-white size-10 size-10 transition-all duration-300 cursor-pointer shrink-0"
         onClick={() => setOpen(true)}
       >
         <BurgerSvg className="text-white" />
       </button>
 
       <Drawer open={open} onOpenChange={setOpen} direction="right">
-        <DrawerContent className="flex flex-col justify-between bg-primary border-none! w-full!">
-          <DrawerHeader>
-            <DrawerTitle className="flex justify-between items-center pt-5">
-              <Image
-                src="/logo.svg"
-                alt="Transatron Logo"
-                width={206}
-                height={40}
-              />
-              <button
-                className="lg:hidden flex justify-center items-center hover:bg-primary/30 border border-primary size-10 transition-all duration-300 cursor-pointer"
-                onClick={() => setOpen(false)}
-              >
-                <Image src="/cross.svg" alt="Cross" width={20} height={20} />
-              </button>
-            </DrawerTitle>
-          </DrawerHeader>
+        <DrawerContent className="flex flex-col justify-center items-center bg-primary border-none! w-full!">
+          <button
+            className="lg:hidden top-5 right-5 absolute flex justify-center items-center hover:bg-primary/30 ml-auto border border border-primary border-white size-10 transition-all duration-300 cursor-pointer"
+            onClick={() => setOpen(false)}
+          >
+            <Image src="/cross.svg" alt="Cross" width={20} height={20} />
+          </button>
 
           <div className="flex flex-col justify-center items-center gap-7.5">
             {navigation.map(
@@ -121,7 +111,7 @@ export default function Header() {
                   href={item.link}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "relative hover:bg-accent px-4 py-2 rounded-full text-white active:text-white text-lg text-center",
+                    "relative hover:bg-accent px-4 py-2 rounded-full text-white active:text-white text-2xl text-center",
                     { "text-white": item.link === pathname }
                   )}
                 >
@@ -141,12 +131,9 @@ export default function Header() {
               //   </Link>
               // )
             )}
-          </div>
-
-          <DrawerFooter className="flex-col gap-4 mx-10 mt-0!">
             <Button
               variant="default"
-              className="hover:bg-[#1E1E1E] shadow-none px-4! py-3.5! border border-white rounded-full h-12 text-lg leading-5 bg-accent-dark"
+              className="hover:bg-[#1E1E1E] shadow-none px-8! py-3.5! border border-white rounded-full h-14! text-2xl leading-5 bg-accent-dark"
               onClick={() => {
                 setOpen(false);
                 setQuoteDialogOpen(true);
@@ -154,7 +141,7 @@ export default function Header() {
             >
               Request a quote
             </Button>
-          </DrawerFooter>
+          </div>
         </DrawerContent>
       </Drawer>
       <QuoteDialog open={quoteDialogOpen} setOpen={setQuoteDialogOpen} />
