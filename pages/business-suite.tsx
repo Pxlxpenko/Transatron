@@ -3,6 +3,7 @@ import SecureSectionBusinessSuite from "@/components/SecureSectionBusinessSuite"
 import HeroSectionBusinessSuite from "@/components/HeroSectionBusinessSuite";
 import WatchInActionSectionBusinessSuite from "@/components/WatchInActionSectionBusinessSuite";
 import KeyFeaturesSectionBusinessSuite from "@/components/KeyFeaturesSectionBusinessSuite";
+import FadeInSection from "@/components/FadeInSection";
 
 export default function BusinessSuitePage() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -117,19 +118,29 @@ export default function BusinessSuitePage() {
         id="hero"
         className="flex justify-center items-center bg-snap-section"
       >
-        <HeroSectionBusinessSuite />
+        <FadeInSection className="flex justify-center items-center">
+          <HeroSectionBusinessSuite />
+        </FadeInSection>
       </div>
 
-      <div ref={secureRef} id="secure-section" className="snap-section">
-        <SecureSectionBusinessSuite />
+      <div
+        ref={secureRef}
+        id="secure-section"
+        className="bg-white snap-section"
+      >
+        <FadeInSection className="flex justify-center items-center w-full">
+          <SecureSectionBusinessSuite />
+        </FadeInSection>
       </div>
 
       <div
         ref={additionalRef}
         id="additional-content"
-        className="flex justify-center items-center snap-section"
+        className="flex justify-center items-center w-full bg-accent-dark snap-section"
       >
-        <WatchInActionSectionBusinessSuite />
+        <FadeInSection className="flex justify-center items-center">
+          <WatchInActionSectionBusinessSuite />
+        </FadeInSection>
       </div>
 
       <div
@@ -137,7 +148,9 @@ export default function BusinessSuitePage() {
         id="section-4"
         className="flex justify-center items-center"
       >
-        <KeyFeaturesSectionBusinessSuite />
+        <FadeInSection className="flex justify-center items-center">
+          <KeyFeaturesSectionBusinessSuite />
+        </FadeInSection>
       </div>
     </div>
   );

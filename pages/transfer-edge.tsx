@@ -3,8 +3,10 @@ import KeyFeaturesSectionTransferEdge from "@/components/KeyFeaturesSectionTrans
 import SecureSectionTransferEdge from "@/components/SecureSectionTransferEdge";
 import SeoHead from "@/components/SeoHead";
 import WatchInActionSectionTransferEdge from "@/components/WatchInActionSectionTransferEdge";
+import FadeInSection from "@/components/FadeInSection";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
+import { scrollToTop } from "@/lib/utils";
 
 function TransferEdgeInner() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -119,19 +121,25 @@ function TransferEdgeInner() {
         id="hero"
         className="flex justify-center items-center bg-snap-section"
       >
-        <HeroSectionTransferEdge />
+        <FadeInSection className="flex justify-center items-center">
+          <HeroSectionTransferEdge />
+        </FadeInSection>
       </div>
 
       <div ref={secureRef} id="secure-section" className="snap-section">
-        <SecureSectionTransferEdge />
+        <FadeInSection className="flex justify-center items-center">
+          <SecureSectionTransferEdge />
+        </FadeInSection>
       </div>
 
       <div
         ref={additionalRef}
         id="additional-content"
-        className="flex justify-center items-center snap-section"
+        className="flex justify-center items-center w-full bg-accent-dark snap-section"
       >
-        <WatchInActionSectionTransferEdge />
+        <FadeInSection className="flex justify-center items-center">
+          <WatchInActionSectionTransferEdge />
+        </FadeInSection>
       </div>
 
       <div
@@ -139,7 +147,9 @@ function TransferEdgeInner() {
         id="section-4"
         className="flex flex-col justify-center items-center"
       >
-        <KeyFeaturesSectionTransferEdge />
+        <FadeInSection className="flex flex-col justify-center items-center w-full">
+          <KeyFeaturesSectionTransferEdge />
+        </FadeInSection>
       </div>
     </div>
   );

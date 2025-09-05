@@ -50,7 +50,7 @@ export default function KeyFeaturesSectionTransferEdge() {
           className="relative flex flex-col items-center mx-auto px-10 md:px-25 w-full max-w-[1360px]"
         >
           <div className="flex flex-col justify-center items-center gap-10 w-full max-w-[924px] min-h-screen">
-            <h1 className="font-black text-[40px] text-white sm:text-[58px] sm:text-8xl text-center uppercase">
+            <h1 className="font-black text-[40px] text-white sm:text-8xl text-center uppercase">
               benefits for your users
             </h1>
             {features.slice(0, 3).map((feature, i) => (
@@ -84,12 +84,9 @@ export default function KeyFeaturesSectionTransferEdge() {
       </div>
 
       <div className="flex flex-col justify-center items-center py-15 w-full bg-accent-pink">
-        <FadeInSection
-          triggerOnMount
-          className="relative flex flex-col items-center mx-auto px-10 md:px-25 w-full max-w-[1360px]"
-        >
+        <FadeInSection className="relative flex flex-col items-center mx-auto px-10 md:px-25 w-full max-w-[1360px]">
           <div className="flex flex-col items-center gap-10 w-full max-w-[924px] bg-accent-pink">
-            <h1 className="font-black text-[40px] text-white sm:text-[58px] sm:text-8xl text-center uppercase">
+            <h1 className="font-black text-[40px] text-white sm:text-8xl text-center uppercase">
               benefits for your wallet
             </h1>
             {features.slice(3).map((feature, i) => (
