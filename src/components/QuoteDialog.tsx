@@ -77,7 +77,7 @@ const QuoteDialog = ({
 
   return (
     <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="flex flex-col justify-center md:justify-start p-4 lg:p-10 pt-14 border border-primary/50 rounded-none md:rounded-[40px] w-[100vw] md:w-[474px] max-w-[474px] h-full md:h-auto bg-accent-dark">
+      <DialogContent className="flex flex-col md:justify-start p-4 lg:p-10 pt-14 border border-primary/50 rounded-none md:rounded-[40px] w-[100vw] md:w-[474px] max-w-[474px] h-full md:h-auto bg-accent-dark">
         {quoteSubmitted ? (
           <>
             <div className="flex flex-col gap-5 mt-5">
@@ -100,11 +100,11 @@ const QuoteDialog = ({
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="font-bold text-[48px] leading-[130%]">
+              <DialogTitle className="font-bold text-[32px] leading-[130%]">
                 Request a quote
               </DialogTitle>
             </DialogHeader>
-            <div className="relative">
+            <div className="relative h-full">
               <form
                 onSubmit={(e) => {
                   if (form.state.isSubmitting) return;
@@ -112,7 +112,7 @@ const QuoteDialog = ({
                   e.stopPropagation();
                   form.handleSubmit();
                 }}
-                className="space-y-4"
+                className="flex flex-col gap-4 h-full"
               >
                 <form.Field
                   name="averageDailyTransactions"
@@ -130,7 +130,7 @@ const QuoteDialog = ({
                 >
                   {(field) => (
                     <div className="flex flex-col gap-2">
-                      <label className="peer-disabled:opacity-70 font-medium text-sm leading-none peer-disabled:cursor-not-allowed">
+                      <label className="peer-disabled:opacity-70 font-medium text-base leading-6 peer-disabled:cursor-not-allowed">
                         Average number of daily transactions
                       </label>
                       <RadioGroup
@@ -141,8 +141,8 @@ const QuoteDialog = ({
                         <div className="flex items-center space-x-2">
                           <RadioGroupItem value="< 1000" id="< 1000" />
                           <label
-                            htmlFor="1-100"
-                            className="font-normal text-sm cursor-pointer"
+                            htmlFor="< 1000"
+                            className="font-normal text-lg cursor-pointer"
                           >
                             &lt; 1000
                           </label>
@@ -150,8 +150,8 @@ const QuoteDialog = ({
                         <div className="flex items-center space-x-2">
                           <RadioGroupItem value="> 1000" id="> 1000" />
                           <label
-                            htmlFor="100-500"
-                            className="font-normal text-sm cursor-pointer"
+                            htmlFor="> 1000"
+                            className="font-normal text-lg cursor-pointer"
                           >
                             &gt; 1000
                           </label>
@@ -252,16 +252,14 @@ const QuoteDialog = ({
                   )}
                 </form.Field>
 
-                <DialogFooter className="pt-4 w-full">
-                  <Button
-                    type="submit"
-                    variant={"default"}
-                    className="mx-auto border-2 border-white! rounded-full w-1/2 min-w-fit h-14 font-semibold text-xl bg-accent-pink!"
-                    disabled={form.state.isSubmitting}
-                  >
-                    {form.state.isSubmitting ? "Sending..." : "Send request"}
-                  </Button>
-                </DialogFooter>
+                <Button
+                  type="submit"
+                  variant={"default"}
+                  className="mx-auto mt-auto border-2 border-white! rounded-full w-full md:w-1/2 min-w-fit h-14 font-semibold text-xl bg-accent-pink!"
+                  disabled={form.state.isSubmitting}
+                >
+                  {form.state.isSubmitting ? "Sending..." : "Send request"}
+                </Button>
               </form>
             </div>
           </>
