@@ -2,11 +2,23 @@
 
 import { useEffect, useRef } from "react";
 import Lottie, { type LottieRefCurrentProps } from "lottie-react";
-import animationData from "@/assets/transatron1.json";
+import defaultAnimationData from "@/assets/transatron1.json";
 
-const frames = [0, 30, 56, 93] as const;
+type SecureStepProps = {
+  animationData?: object;
+  startFrame?: number;
+  endFrame?: number;
+  keyStep?: number;
+  frames?: readonly number[] | number[];
+};
 
-export default function SecureStep() {
+export default function SecureStep({
+  animationData = defaultAnimationData as unknown as object,
+  startFrame,
+  endFrame,
+  keyStep,
+  frames: frames,
+}: SecureStepProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const lottieRef = useRef<LottieRefCurrentProps>(null);
   const isActiveRef = useRef<boolean>(false);
@@ -19,14 +31,15 @@ export default function SecureStep() {
     if (!container) return;
 
     const instance = lottieRef.current;
-    const startFrame = frames[0];
-    const endFrame = frames[frames.length - 1];
-    const frameSpan = endFrame - startFrame;
+    const effectiveFrames = frames && frames.length > 0 ? frames : frames;
+    const start = startFrame ?? effectiveFrames[0];
+    const end = endFrame ?? effectiveFrames[effectiveFrames.length - 1];
+    const frameSpan = end - start;
 
     const renderAtProgress = (p: number) => {
       const clamped = Math.max(0, Math.min(1, p));
       progressRef.current = clamped;
-      const frameFloat = startFrame + clamped * frameSpan;
+      const frameFloat = start + clamped * frameSpan;
       const frame = Math.round(frameFloat);
       instance?.goToAndStop(frame, true);
     };
@@ -40,7 +53,7 @@ export default function SecureStep() {
 
     // Sensitivities (slower progression)
     const SCROLL_SENS = 1 / 3000; // pixels -> progress
-    const KEY_STEP = 0.12; // progress per key press
+    const KEY_STEP = keyStep ?? 0.12; // progress per key press
     const TOUCH_SENS = 1 / 3000; // pixels -> progress
 
     // Boundary leave threshold to avoid sticky edge cases
@@ -170,7 +183,7 @@ export default function SecureStep() {
       );
       container.removeEventListener("touchmove", onTouchMove as EventListener);
     };
-  }, []);
+  }, [startFrame, endFrame, keyStep, frames]);
 
   return (
     <div
@@ -183,7 +196,7 @@ export default function SecureStep() {
         <div className="relative flex justify-center items-center bg-white mx-auto w-full h-screen overflow-hidden">
           <Lottie
             lottieRef={lottieRef}
-            animationData={animationData as unknown as object}
+            animationData={animationData}
             autoplay={false}
             loop={false}
             className="w-full h-full object-contain"
