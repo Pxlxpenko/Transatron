@@ -31,12 +31,7 @@ export default function SecureSectionBusinessSuite() {
 
   return (
     <div className="bg-white snap-start">
-      <SecureStep
-        totalSteps={4}
-        textColor="text-accent-dark"
-        allTexts={allTexts}
-        allCoinImages={allCoinImages}
-      />
+      <SecureStep />
     </div>
   );
 }

@@ -30,12 +30,7 @@ export default function SecureSectionTransferEdge() {
 
   return (
     <div className="bg-white snap-start">
-      <SecureStep
-        totalSteps={3}
-        textColor="text-accent-pink"
-        allTexts={allTexts}
-        allCoinImages={allCoinImages}
-      />
+      <SecureStep />
     </div>
   );
 }
