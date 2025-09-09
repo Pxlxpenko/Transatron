@@ -2,6 +2,7 @@ import FadeInSection from "@/components/FadeInSection";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Button } from "./ui/button";
+import { openCalendlyPopup } from "@/lib/utils";
 
 const features = [
   {
@@ -81,7 +82,12 @@ export default function KeyFeaturesSectionTransferEdge() {
               </div>
             ))}
           </div>
-          <Button className="hover:bg-[#1E1E1E] shadow-none px-12 border border-white rounded-full h-14! text-2xl bg-accent-dark">
+          <Button
+            className="hover:bg-[#1E1E1E] shadow-none px-12 border border-white rounded-full h-14! text-2xl bg-accent-dark"
+            onClick={() =>
+              openCalendlyPopup("https://calendly.com/hello-glenn/30min")
+            }
+          >
             Find out more
           </Button>
         </FadeInSection>
@@ -121,7 +127,12 @@ export default function KeyFeaturesSectionTransferEdge() {
               </div>
             ))}
           </div>
-          <Button className="bg-transparent hover:bg-[#1E1E1E] shadow-none px-12 border border-white rounded-full h-14! text-2xl">
+          <Button
+            className="bg-transparent hover:bg-[#1E1E1E] shadow-none px-12 border border-white rounded-full h-14! text-2xl"
+            onClick={() =>
+              openCalendlyPopup("https://calendly.com/hello-glenn/30min")
+            }
+          >
             Find out more
           </Button>
         </FadeInSection>

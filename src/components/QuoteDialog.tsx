@@ -58,7 +58,8 @@ const QuoteDialog = ({
             email: value.email,
             average_daily_transactions: value.averageDailyTransactions,
             name: value.name,
-          }
+          },
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
         );
 
         console.log("SUCCESS!");
