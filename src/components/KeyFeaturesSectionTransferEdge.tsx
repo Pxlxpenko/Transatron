@@ -58,7 +58,7 @@ export default function KeyFeaturesSectionTransferEdge() {
             {features.slice(0, 3).map((feature, i) => (
               <div
                 className={cn(
-                  "flex flex-col-reverse justify-between items-center gap-10 md:px-12.5 w-full",
+                  "flex flex-col-reverse justify-between items-center gap-10 md:gap-27 md:px-12.5 w-full",
                   {
                     "md:flex-row-reverse": i % 2 === 0,
                     "md:flex-row": i % 2 !== 0,
@@ -94,16 +94,16 @@ export default function KeyFeaturesSectionTransferEdge() {
         </FadeInSection>
       </div>
 
-      <div className="flex flex-col justify-center items-center py-15 w-full bg-accent-pink">
+      <div className="flex flex-col justify-center items-center py-10 md:py-15 w-full bg-accent-pink">
         <FadeInSection className="relative flex flex-col items-center gap-[40px] md:gap-[75px] mx-auto px-4 md:px-25 w-full max-w-[1360px]">
-          <div className="flex flex-col items-center gap-10 w-full max-w-[924px] bg-accent-pink">
+          <div className="flex flex-col justify-center items-center gap-10 md:gap-20 w-full max-w-[924px] bg-accent-pink">
             <h1 className="font-black text-[48px] text-white md:text-8xl text-center uppercase">
               benefits for your wallet
             </h1>
             {features.slice(3).map((feature, i) => (
               <div
                 className={cn(
-                  "flex flex-col-reverse justify-between items-center gap-10 md:px-12.5 w-full",
+                  "flex flex-col-reverse justify-between items-center gap-10 md:gap-27 md:px-12.5 w-full",
                   {
                     "md:flex-row-reverse": i % 2 === 0,
                     "md:flex-row": i % 2 !== 0,
