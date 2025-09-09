@@ -78,6 +78,7 @@ export default function KeyFeaturesSectionTransferEdge() {
                   alt={feature.title}
                   width={200}
                   height={200}
+                  className="size-[100px] md:size-[200px]"
                 />
               </div>
             ))}

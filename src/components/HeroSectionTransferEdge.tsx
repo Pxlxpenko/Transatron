@@ -20,7 +20,7 @@ export default function HeroSectionTransferEdge() {
           <div className="flex md:flex-row flex-col gap-[22.5px] md:gap-4">
             <Button
               variant="default"
-              className="bg-transparent hover:bg-[#1E1E1E] shadow-none border border-white rounded-full h-14! text-2xl"
+              className="bg-transparent hover:bg-[#1E1E1E] shadow-none md:px-8 border border-white rounded-full h-14! text-2xl"
               onClick={() =>
                 openCalendlyPopup("https://calendly.com/hello-glenn/30min")
               }

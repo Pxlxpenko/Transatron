@@ -43,7 +43,7 @@ export default function WatchInActionSectionBusinessSuite({
   return (
     <div
       id="watch-in-action"
-      className="flex flex-col justify-center items-center py-15 w-full min-h-screen bg-accent-dark snap-start"
+      className="flex flex-col justify-center items-center py-15 w-full min-h-screen bg-accent-dark scroll-mt-[72px] snap-start"
     >
       <FadeInSection
         triggerOnMount

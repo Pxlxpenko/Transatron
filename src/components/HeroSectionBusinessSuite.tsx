@@ -20,7 +20,7 @@ export default function HeroSectionBusinessSuite() {
           <div className="flex md:flex-row flex-col gap-[22.5px] md:gap-4">
             <Button
               variant="default"
-              className="hover:bg-[#1E1E1E] shadow-none border border-white rounded-full h-14! text-2xl bg-accent-dark"
+              className="hover:bg-[#1E1E1E] shadow-none md:px-8 border border-white rounded-full h-14! text-2xl bg-accent-dark"
               onClick={() =>
                 openCalendlyPopup("https://calendly.com/hello-glenn/30min")
               }
@@ -29,7 +29,7 @@ export default function HeroSectionBusinessSuite() {
             </Button>
             <Button
               variant="default"
-              className="hover:bg-[#1E1E1E] shadow-none border border-white rounded-full h-14! text-2xl bg-accent-dark"
+              className="hover:bg-[#1E1E1E] shadow-none md:px-8 border border-white rounded-full h-14! text-2xl bg-accent-dark"
               onClick={() =>
                 document
                   .getElementById("watch-in-action")

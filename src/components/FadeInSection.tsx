@@ -38,7 +38,7 @@ function FadeInSection(
   const localRef = useRef<HTMLDivElement | null>(null);
   const controls = useAnimation();
   const inView = useInView(localRef, {
-    margin: "0px 0px -20% 0px",
+    margin: "0px 0px 0% 0px",
     amount: 0.1,
     once: !enableFadeOut,
   });
