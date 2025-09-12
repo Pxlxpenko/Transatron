@@ -1,16 +1,10 @@
 import { Button } from "@/components/ui/button";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent } from "@/components/ui/drawer";
 import Image from "next/image";
 import { cn, scrollToTop } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BurgerSvg from "public/burger.svg?react";
 import QuoteDialog from "./QuoteDialog";
 
@@ -30,11 +24,22 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   const [quoteDialogOpen, setQuoteDialogOpen] = useState(false);
   const pathname = usePathname();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 100);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header
       className={cn(
-        "top-0 right-0 left-0 z-30 sticky flex justify-between items-center bg-primary mx-auto px-4 md:px-10 lg:pt-0 w-full h-18 md:h-25 lg:h-20 transition-all duration-200"
+        "top-0 right-0 left-0 z-30 sticky flex justify-between items-center mx-auto px-4 md:px-10 lg:pt-0 w-full h-18 md:h-25 lg:h-20 transition-all duration-200",
+        scrolled
+          ? "bg-primary/75 supports-[backdrop-filter]:bg-primary/60 backdrop-blur-lg border-b border-white/10"
+          : "bg-primary"
       )}
     >
       <div className="flex justify-between items-center gap-4 mx-auto w-full max-w-[1360px]">
