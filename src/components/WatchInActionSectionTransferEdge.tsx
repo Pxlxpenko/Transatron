@@ -38,32 +38,30 @@ const defaultVideos: VideoItem[] = [
   },
 ];
 
-function splitIntoBalancedRows(items: VideoItem[]): VideoItem[][] {
-  const rows: VideoItem[][] = [];
-  let startIndex = 0;
+// function splitIntoBalancedRows(items: VideoItem[]): VideoItem[][] {
+//   const rows: VideoItem[][] = [];
+//   let startIndex = 0;
 
-  while (startIndex < items.length) {
-    const remaining = items.length - startIndex;
-    let take = Math.min(3, remaining);
+//   while (startIndex < items.length) {
+//     const remaining = items.length - startIndex;
+//     let take = Math.min(3, remaining);
 
-    if (remaining === 4 || (remaining % 3 === 1 && remaining !== 1)) {
-      take = 2;
-    }
+//     if (remaining === 4 || (remaining % 3 === 1 && remaining !== 1)) {
+//       take = 2;
+//     }
 
-    rows.push(items.slice(startIndex, startIndex + take));
-    startIndex += take;
-  }
+//     rows.push(items.slice(startIndex, startIndex + take));
+//     startIndex += take;
+//   }
 
-  return rows;
-}
+//   return rows;
+// }
 
 export default function WatchInActionSectionTransferEdge({
   videos = defaultVideos,
 }: {
   videos?: VideoItem[];
 }) {
-  const rows = splitIntoBalancedRows(videos);
-
   return (
     <div
       id="watch-in-action"
@@ -78,36 +76,33 @@ export default function WatchInActionSectionTransferEdge({
         </h1>
 
         <div className="flex flex-col gap-10 w-full">
-          {rows.map((row, rowIndex) => (
-            <div
-              key={`row-${rowIndex}`}
-              className={`flex md:flex-wrap flex-col md:flex-row gap-10 w-full items-stretch justify-center`}
-            >
-              {row.map((video) => (
-                <div
-                  key={video.id}
-                  className="flex flex-col flex-shrink-0 gap-5 bg-primary pb-[30px] rounded-[40px] max-w-[380px]"
-                >
-                  <div className="bg-[#DDD4FF] rounded-t-[30px] w-full h-[240px] overflow-hidden">
-                    <iframe
-                      className="w-full h-full"
-                      src={video.embedSrc}
-                      title={video.title ?? "YouTube video player"}
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    />
-                  </div>
-                  {video.title && (
-                    <p className="px-7.5 font-semibold text-[25px] text-white leading-[100%]">
-                      {video.title}
-                    </p>
-                  )}
+          <div
+            className={`flex flex-col flex-wrap lg:flex-row gap-10 w-full items-center justify-center`}
+          >
+            {videos.map((row) => (
+              <div
+                key={row.id}
+                className="flex flex-col gap-5 bg-primary pb-[30px] rounded-[40px] max-w-[380px]"
+              >
+                <div className="bg-[#DDD4FF] rounded-t-[30px] w-full h-[240px] overflow-hidden">
+                  <iframe
+                    className="w-full h-full"
+                    src={row.embedSrc}
+                    title={row.title ?? "YouTube video player"}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
                 </div>
-              ))}
-            </div>
-          ))}
+                {row.title && (
+                  <p className="px-7.5 font-semibold text-[25px] text-white leading-[100%]">
+                    {row.title}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
 
         <Button

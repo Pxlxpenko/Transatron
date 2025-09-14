@@ -9,13 +9,13 @@ const features = [
     title: "Massive Fee Discounts",
     description:
       "Users save significantly on network fees for every transaction, making your wallet the most cost-effective choice on the market.",
-    image: "/benefits1-transfer.png",
+    image: "/benefits2-transfer.png",
   },
   {
     title: "Pay Without Native Coins",
     description:
       "Removes the major friction point of needing to hold specific coins (like ETH or TRX) just to pay for gas, creating a superior user experience.",
-    image: "/benefits2-transfer.png",
+    image: "/benefits1-transfer.png",
   },
   {
     title: "Seamless & Secure",
