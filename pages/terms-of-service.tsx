@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
   }, []);
   return (
     <>
-      <SeoHead title="Privacy Policy" path="/privacy-policy" noIndex />
+      <SeoHead title="Terms of Service" path="/terms-of-service" noIndex />
       <div className="relative flex flex-col gap-8 lg:pt-25 pb-12.5 w-full max-w-dvw min-h-screen overflow-hidden">
         <FadeInSection
           triggerOnMount
@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
             >
               HOME
             </a>{" "}
-            / <span className="text-white uppercase">PRIVACY POLICY</span>
+            / <span className="text-white uppercase">TERMS OF SERVICE</span>
           </div>
           <header>
             <h1 className="mb-6 font-bold text-white text-5xl leading-16 tracking-[0.6px]">
