@@ -11,7 +11,7 @@ export default function HeroSectionTransferEdge() {
         className="relative flex lg:flex-row flex-col-reverse justify-between items-center gap-6 mx-auto p-5 md:p-14 rounded-[48px] w-full bg-accent-pink"
       >
         <div className="flex flex-col gap-6 md:gap-10.5 lg:max-w-[748px]">
-          <h1 className="font-black text-[42px] text-white md:text-8xl! uppercase">
+          <h1 className="font-black text-[42px] text-white md:text-8xl! uppercase leading-none">
             Transfer edge
           </h1>
           <p className="font-bold text-[22px] text-white md:text-[48px] leading-[130%]">
@@ -36,7 +36,7 @@ export default function HeroSectionTransferEdge() {
                   ?.scrollIntoView({ behavior: "smooth", block: "start" })
               }
             >
-              Watch in action
+              Watch it in action
             </Button>
           </div>
         </div>

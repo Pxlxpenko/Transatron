@@ -11,7 +11,7 @@ export default function HeroSectionBusinessSuite() {
         className="relative flex xl:flex-row flex-col-reverse justify-between gap-6 mx-auto p-5 md:p-14 rounded-[48px] w-full bg-accent-dark"
       >
         <div className="flex flex-col gap-6 md:gap-10.5">
-          <h1 className="font-black text-[42px] text-white md:text-8xl! uppercase">
+          <h1 className="font-black text-[42px] text-white md:text-8xl! uppercase leading-none">
             Business Suite
           </h1>
           <p className="font-bold text-[22px] text-white md:text-[48px] leading-[130%]">
@@ -36,7 +36,7 @@ export default function HeroSectionBusinessSuite() {
                   ?.scrollIntoView({ behavior: "smooth", block: "start" })
               }
             >
-              Watch in action
+              Watch it in action
             </Button>
           </div>
         </div>
