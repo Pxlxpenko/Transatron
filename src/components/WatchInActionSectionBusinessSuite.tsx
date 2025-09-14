@@ -47,7 +47,7 @@ export default function WatchInActionSectionBusinessSuite({
     >
       <FadeInSection
         triggerOnMount
-        className="relative flex flex-col items-center gap-16 mx-auto px-2.5 md:px-25 pb-5 w-full max-w-[1360px]"
+        className="relative flex flex-col items-center gap-16 mx-auto px-2.5 pb-5 w-full max-w-[1360px]"
       >
         <h1 className="font-black text-[48px] text-white md:text-8xl! text-center uppercase">
           WATCH IN ACTION
@@ -84,7 +84,7 @@ export default function WatchInActionSectionBusinessSuite({
           variant="default"
           className="hover:bg-[#1E1E1E] shadow-none px-12! border border-white rounded-full w-fit h-14! text-2xl bg-accent-dark"
           onClick={() =>
-            openCalendlyPopup("https://calendly.com/hello-glenn/30min")
+            openCalendlyPopup("https://calendly.com/mtiutin/30min")
           }
         >
           Book a demo

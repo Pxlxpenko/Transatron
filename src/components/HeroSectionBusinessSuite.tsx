@@ -22,7 +22,7 @@ export default function HeroSectionBusinessSuite() {
               variant="default"
               className="hover:bg-[#1E1E1E] shadow-none md:px-8 border border-white rounded-full h-14! text-2xl bg-accent-dark"
               onClick={() =>
-                openCalendlyPopup("https://calendly.com/hello-glenn/30min")
+                openCalendlyPopup("https://calendly.com/mtiutin/30min")
               }
             >
               Get in touch

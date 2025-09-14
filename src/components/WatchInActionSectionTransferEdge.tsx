@@ -4,13 +4,38 @@ import { openCalendlyPopup } from "@/lib/utils";
 
 type VideoItem = {
   id: string;
-  title: string;
+  embedSrc: string;
+  title?: string;
   thumbnailUrl?: string;
 };
 
 const defaultVideos: VideoItem[] = [
-  { id: "v1", title: "Significant Cost Savings" },
-  { id: "v2", title: "Significant Cost Savings" },
+  {
+    id: "wY4lgTpgkB4",
+
+    title: "How to Transact on Tron for Free with Transatron",
+    embedSrc: "https://www.youtube.com/embed/wY4lgTpgkB4?si=75-yoJjU1ajVldYt",
+  },
+  {
+    id: "5RWmVCa2abw",
+    title: "How to handle Insufficient TRX issue with Transatron Bot",
+    embedSrc: "https://www.youtube.com/embed/5RWmVCa2abw?si=CWlzDUZBIX0F3WB8",
+  },
+  {
+    id: "WJ507JiXuF8",
+    title: "How to Move USDT from Your Mobile Wallet with Transatron Bot",
+    embedSrc: "https://www.youtube.com/embed/WJ507JiXuF8?si=BFtmk2F1u64VfWJx",
+  },
+  {
+    id: "NjjVCP0haJQ",
+    title: "Save on Tron Fees with Transatron RPC and TronLink! 🚀",
+    embedSrc: "https://www.youtube.com/embed/NjjVCP0haJQ?si=PuoqUgSDB6hnaapm",
+  },
+  {
+    id: "-DLQIQTvseA",
+    title: "How to stake TRX and make more with Transatron",
+    embedSrc: "https://www.youtube.com/embed/-DLQIQTvseA?si=PsF4cLPIMsdZCPIh",
+  },
 ];
 
 function splitIntoBalancedRows(items: VideoItem[]): VideoItem[][] {
@@ -46,7 +71,7 @@ export default function WatchInActionSectionTransferEdge({
     >
       <FadeInSection
         triggerOnMount
-        className="relative flex flex-col items-center gap-16 mx-auto px-2.5 md:px-25 pb-5 w-full max-w-[1360px]"
+        className="relative flex flex-col items-center gap-16 mx-auto px-2.5 pb-5 w-full max-w-[1360px]"
       >
         <h1 className="font-black text-[48px] text-white md:text-8xl! text-center uppercase">
           WATCH IN ACTION
@@ -69,10 +94,22 @@ export default function WatchInActionSectionTransferEdge({
                   key={video.id}
                   className="flex flex-col gap-4 bg-white p-2.5 md:p-10 pb-5 rounded-[40px] w-full"
                 >
-                  <div className="bg-[#DDD4FF] rounded-[30px] w-full h-[309px]" />
-                  <p className="font-bold text-[#313131] text-[18px] md:text-[32px] text-center leading-[130%]">
-                    {video.title}
-                  </p>
+                  <div className="bg-[#DDD4FF] rounded-[30px] w-full h-[315px] overflow-hidden">
+                    <iframe
+                      className="w-full h-full"
+                      src={video.embedSrc}
+                      title={video.title ?? "YouTube video player"}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  </div>
+                  {video.title && (
+                    <p className="font-bold text-[#313131] text-[18px] md:text-[32px] text-center leading-[130%]">
+                      {video.title}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
@@ -83,7 +120,7 @@ export default function WatchInActionSectionTransferEdge({
           variant="default"
           className="hover:bg-[#1E1E1E] shadow-none px-12! border border-white rounded-full w-fit h-14! text-2xl bg-accent-dark"
           onClick={() =>
-            openCalendlyPopup("https://calendly.com/hello-glenn/30min")
+            openCalendlyPopup("https://calendly.com/mtiutin/30min")
           }
         >
           Book a demo

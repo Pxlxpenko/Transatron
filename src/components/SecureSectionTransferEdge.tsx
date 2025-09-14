@@ -1,43 +1,44 @@
-import SecureStep from "./SecureStep";
-import animationData from "@/assets/transatron2.json";
+import { useEffect, useRef } from "react";
+import Lottie, { type LottieRefCurrentProps } from "lottie-react";
+import animationData from "@/assets/transferEdgeAnimation.json";
 
 export default function SecureSectionTransferEdge() {
-  // const allTexts = [
-  //   {
-  //     text: (
-  //       <>
-  //         powerful
-  //         <br /> integration
-  //       </>
-  //     ),
-  //   },
-  //   {
-  //     text: (
-  //       <>
-  //         for <br /> non-custodial
-  //       </>
-  //     ),
-  //   },
-  //   {
-  //     text: (
-  //       <>
-  //         wallet <br /> providers
-  //       </>
-  //     ),
-  //   },
-  // ];
-
-  // const allCoinImages = ["/coins1bg.svg", "/coins2bg.svg", "/coins3bg.svg"];
-
   return (
     <div className="bg-white snap-start">
-      <SecureStep
-        animationData={animationData as unknown as object}
-        endFrame={96}
-        keyStep={1 / 3}
-        frames={[0, 48, 96]}
-        className="scale-125 md:scale-100"
-      />
+      <div className="relative flex justify-center items-center mx-auto w-full h-screen overflow-hidden">
+        <LottieWrapper />
+      </div>
     </div>
+  );
+}
+
+function LottieWrapper() {
+  const lottieRef = useRef<LottieRefCurrentProps>(null);
+
+  useEffect(() => {
+    const instance = lottieRef.current;
+    if (!instance) return;
+
+    const applySegment = () => {
+      const totalFrames = instance.getDuration?.(true) as number | undefined;
+      if (typeof totalFrames === "number" && totalFrames > 0) {
+        const endFrame = Math.floor(totalFrames * 0.79);
+        instance.playSegments([0, endFrame], true);
+        return;
+      }
+      requestAnimationFrame(applySegment);
+    };
+
+    applySegment();
+  }, []);
+
+  return (
+    <Lottie
+      lottieRef={lottieRef}
+      animationData={animationData as unknown as object}
+      autoplay
+      loop
+      className="w-full h-full object-contain scale-125 md:scale-100"
+    />
   );
 }
