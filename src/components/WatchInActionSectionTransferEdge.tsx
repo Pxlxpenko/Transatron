@@ -81,12 +81,12 @@ export default function WatchInActionSectionTransferEdge({
           {rows.map((row, rowIndex) => (
             <div
               key={`row-${rowIndex}`}
-              className={`flex md:flex-wrap flex-col md:flex-row gap-10 w-full items-center justify-center`}
+              className={`flex md:flex-wrap flex-col md:flex-row gap-10 w-full items-stretch justify-center`}
             >
               {row.map((video) => (
                 <div
                   key={video.id}
-                  className="flex flex-col gap-5 bg-primary pb-[30px] rounded-[40px] max-w-[380px]"
+                  className="flex flex-col flex-shrink-0 gap-5 bg-primary pb-[30px] rounded-[40px] max-w-[380px]"
                 >
                   <div className="bg-[#DDD4FF] rounded-t-[30px] w-full h-[240px] overflow-hidden">
                     <iframe
