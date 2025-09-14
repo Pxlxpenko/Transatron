@@ -5,7 +5,7 @@ import animationData from "@/assets/transferEdgeAnimation.json";
 export default function SecureSectionTransferEdge() {
   return (
     <div className="bg-white snap-start">
-      <div className="relative flex justify-center items-center mx-auto w-full h-screen overflow-hidden">
+      <div className="relative flex justify-center items-center mx-auto w-full h-[333px] md:h-screen overflow-hidden">
         <LottieWrapper />
       </div>
     </div>
@@ -38,7 +38,7 @@ function LottieWrapper() {
       animationData={animationData as unknown as object}
       autoplay
       loop
-      className="w-full h-full object-contain scale-125 md:scale-100"
+      className="w-full h-full object-contain"
     />
   );
 }

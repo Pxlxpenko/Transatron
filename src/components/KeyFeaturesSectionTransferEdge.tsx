@@ -111,7 +111,6 @@ export default function KeyFeaturesSectionTransferEdge() {
                     alt={feature.title}
                     width={308}
                     height={308}
-                    className="size-[308px]"
                   />
                   <div className="flex flex-col gap-4">
                     <h3 className="font-bold text-[24px] text-white leading-[130%]">

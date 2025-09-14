@@ -81,20 +81,14 @@ export default function WatchInActionSectionTransferEdge({
           {rows.map((row, rowIndex) => (
             <div
               key={`row-${rowIndex}`}
-              className={`grid gap-10 w-full ${
-                row.length === 3
-                  ? "grid-cols-1 md:grid-cols-3"
-                  : row.length === 2
-                    ? "grid-cols-1 md:grid-cols-2"
-                    : "grid-cols-1"
-              }`}
+              className={`flex md:flex-wrap flex-col md:flex-row gap-10 w-full items-center justify-center`}
             >
               {row.map((video) => (
                 <div
                   key={video.id}
-                  className="flex flex-col gap-4 bg-white p-2.5 md:p-10 pb-5 rounded-[40px] w-full"
+                  className="flex flex-col gap-5 bg-primary pb-[55px] rounded-[40px] max-w-[380px]"
                 >
-                  <div className="bg-[#DDD4FF] rounded-[30px] w-full h-[315px] overflow-hidden">
+                  <div className="bg-[#DDD4FF] rounded-t-[30px] w-full h-[240px] overflow-hidden">
                     <iframe
                       className="w-full h-full"
                       src={video.embedSrc}
@@ -106,7 +100,7 @@ export default function WatchInActionSectionTransferEdge({
                     />
                   </div>
                   {video.title && (
-                    <p className="font-bold text-[#313131] text-[18px] md:text-[32px] text-center leading-[130%]">
+                    <p className="px-7.5 font-semibold text-[25px] text-white leading-[100%]">
                       {video.title}
                     </p>
                   )}

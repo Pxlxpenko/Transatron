@@ -9,7 +9,7 @@ export default function SecureSectionBusinessSuite() {
           animationData={animationData as unknown as object}
           autoplay
           loop
-          className="w-full h-full object-contain scale-150 md:scale-100"
+          className="w-full h-full object-contain"
         />
       </div>
     </div>
