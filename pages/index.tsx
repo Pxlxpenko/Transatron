@@ -38,6 +38,9 @@ export default function IndexPage() {
               <h1 className="max-w-[480px] font-black text-[40px] text-white md:text-8xl! uppercase group-hover:scale-102 transition-all duration-150">
                 Business Suite
               </h1>
+              <div className="-right-4 bottom-18 absolute px-5 py-4 border border-white text-[#DBD2FF] text-[28px] italic leading-[110%]">
+                Coming soon...
+              </div>
             </div>
           </div>
         </Link>
@@ -93,7 +96,7 @@ export default function IndexPage() {
           href={"/business-suite"}
           className="group flex flex-col bg-accent rounded-2xl transition-all duration-150 hover:bg-accent-dark-hover"
         >
-          <div className="flex flex-col justify-center gap-4 p-10 md:p-15 min-h-[280px]">
+          <div className="flex flex-col gap-4 p-10 md:p-15 min-h-[280px]">
             <h1 className="font-black text-[40px] text-white md:text-8xl! uppercase leading-none group-hover:scale-102 transition-all duration-150">
               Business Suite
             </h1>
@@ -101,6 +104,9 @@ export default function IndexPage() {
               A crypto payment one-stop
               <br /> shop for businesses
             </p>
+            <div className="sm:right-10 sm:bottom-10 sm:absolute relative px-5 py-4 border border-white w-fit text-[#DBD2FF] md:text-[28px] italic leading-[110%]">
+              Coming soon...
+            </div>
           </div>
         </Link>
       </div>
