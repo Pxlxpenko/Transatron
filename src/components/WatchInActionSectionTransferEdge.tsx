@@ -86,7 +86,7 @@ export default function WatchInActionSectionTransferEdge({
               {row.map((video) => (
                 <div
                   key={video.id}
-                  className="flex flex-col gap-5 bg-primary pb-[55px] rounded-[40px] max-w-[380px]"
+                  className="flex flex-col gap-5 bg-primary pb-[30px] rounded-[40px] max-w-[380px]"
                 >
                   <div className="bg-[#DDD4FF] rounded-t-[30px] w-full h-[240px] overflow-hidden">
                     <iframe
