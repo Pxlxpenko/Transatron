@@ -96,7 +96,7 @@ export default function IndexPage() {
         <Link
           onClick={(e) => e.preventDefault()}
           href={"/business-suite"}
-          className="group flex flex-col bg-accent rounded-2xl transition-all duration-150 hover:bg-accent-dark-hover"
+          className="group flex flex-col bg-accent rounded-2xl transition-all duration-150 hover:bg-accent-dark-hover cursor-not-allowed"
         >
           <div className="flex flex-col gap-4 p-10 md:p-15 min-h-[280px]">
             <h1 className="font-black text-[40px] text-white md:text-8xl! uppercase leading-none group-hover:scale-102 transition-all duration-150">
