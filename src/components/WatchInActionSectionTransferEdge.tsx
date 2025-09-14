@@ -77,7 +77,7 @@ export default function WatchInActionSectionTransferEdge({
 
         <div className="flex flex-col gap-10 w-full">
           <div
-            className={`flex flex-col flex-wrap lg:flex-row gap-10 w-full items-center justify-center`}
+            className={`flex flex-col flex-wrap lg:flex-row gap-10 w-full md:items-stretch items-center justify-center`}
           >
             {videos.map((row) => (
               <div
