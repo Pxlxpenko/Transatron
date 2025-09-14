@@ -10,11 +10,12 @@ export default function IndexPage() {
       <SeoHead title="Home" path="/" />
       <div className="hidden relative xl:flex justify-center items-center w-full max-w-[1280px] h-[536px]">
         <Link
+          onClick={(e) => e.preventDefault()}
           href={"/business-suite"}
           style={{
             clipPath: "polygon(0% 0%, 8% 0%, 87% 100%, 0% 100%)",
           }}
-          className="group left-0 absolute flex flex-col justify-center items-center pr-22 w-full max-h-[536px]"
+          className="group left-0 absolute flex flex-col justify-center items-center pr-22 w-full max-h-[536px] cursor-not-allowed"
         >
           <Shape1Svg
             width={1094}

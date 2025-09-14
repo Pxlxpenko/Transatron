@@ -54,15 +54,21 @@ export default function Header() {
 
         <nav className={cn("hidden lg:flex gap-5")}>
           {navigation.map(
-            (item) => (
+            (item, i) => (
               // item.link ? (
               <Link
+                onClick={(e) => {
+                  if (i === 0) {
+                    e.preventDefault();
+                  }
+                }}
                 key={item.name}
                 href={item.link}
                 target={item.target}
                 className={cn(
                   "relative hover:bg-accent! px-4 py-2 rounded-full text-white text-lg text-center",
-                  { "text-white bg-accent": item.link === pathname }
+                  { "text-white bg-accent": item.link === pathname },
+                  { "cursor-not-allowed": i === 0 }
                 )}
               >
                 {item.name}
@@ -109,15 +115,22 @@ export default function Header() {
 
           <div className="flex flex-col justify-center items-center gap-7.5">
             {navigation.map(
-              (item) => (
+              (item, i) => (
                 // item.link ? (
                 <Link
                   key={item.name}
                   href={item.link}
-                  onClick={() => setOpen(false)}
+                  onClick={(e) => {
+                    if (i === 0) {
+                      e.preventDefault();
+                      return;
+                    }
+                    setOpen(false);
+                  }}
                   className={cn(
                     "relative hover:bg-accent px-4 py-2 rounded-full text-white active:text-white text-2xl text-center",
-                    { "text-white": item.link === pathname }
+                    { "text-white": item.link === pathname },
+                    { "cursor-not-allowed": i === 0 }
                   )}
                 >
                   {item.name}
