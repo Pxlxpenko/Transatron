@@ -52,7 +52,7 @@ export default function KeyFeaturesSectionTransferEdge() {
           className="relative flex flex-col items-center gap-[40px] md:gap-[75px] px-4 md:px-25 w-full max-w-[1360px]"
         >
           <div className="flex flex-col justify-center items-center gap-10 md:gap-20 w-full">
-            <h1 className="max-w-[924px] font-black text-[48px] text-white md:text-8xl text-center uppercase">
+            <h1 className="max-w-[924px] font-black text-[48px] text-white md:text-8xl text-center uppercase leading-none">
               benefits for users
             </h1>
             <div className="gap-7.5 grid grid-cols-1 md:grid-cols-3">
@@ -95,7 +95,7 @@ export default function KeyFeaturesSectionTransferEdge() {
       <div className="flex flex-col justify-center items-center py-10 md:py-15 w-full bg-accent-pink">
         <FadeInSection className="relative flex flex-col items-center gap-[40px] md:gap-[75px] mx-auto px-4 md:px-25 w-full max-w-[1360px]">
           <div className="flex flex-col justify-center items-center gap-10 md:gap-20 w-full bg-accent-pink">
-            <h1 className="max-w-[924px] font-black text-[48px] text-white md:text-8xl text-center uppercase">
+            <h1 className="max-w-[924px] font-black text-[48px] text-white md:text-8xl text-center uppercase leading-none">
               benefits for wallets
             </h1>
             <div className="gap-7.5 grid grid-cols-1 md:grid-cols-3">
