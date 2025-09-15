@@ -49,7 +49,7 @@ export default function WatchInActionSectionBusinessSuite({
         triggerOnMount
         className="relative flex flex-col items-center gap-16 mx-auto px-2.5 pb-5 w-full max-w-[1360px]"
       >
-        <h1 className="font-black text-[48px] text-white md:text-8xl! text-center uppercase">
+        <h1 className="font-black text-[48px] text-white md:text-8xl! text-center uppercase leading-none">
           WATCH IT IN ACTION
         </h1>
         <div className="flex flex-col gap-10 w-full">
