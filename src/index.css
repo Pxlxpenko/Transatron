@@ -178,7 +178,7 @@ html.snap-disabled {
   min-height: 100vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   html.snap-enabled {
     scroll-snap-type: none;
     overflow-y: auto;

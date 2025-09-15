@@ -84,7 +84,7 @@ export default function KeyFeaturesSectionTransferEdge() {
           <Button
             className="hover:bg-[#1E1E1E] shadow-none px-12 border border-white rounded-full h-14! text-2xl bg-accent-dark"
             onClick={() =>
-              openCalendlyPopup("https://calendly.com/mtiutin/30min")
+              openCalendlyPopup("https://calendly.com/transatron/30min")
             }
           >
             Find out more
@@ -127,7 +127,7 @@ export default function KeyFeaturesSectionTransferEdge() {
           <Button
             className="bg-transparent hover:bg-[#1E1E1E] shadow-none px-12 border border-white rounded-full h-14! text-2xl"
             onClick={() =>
-              openCalendlyPopup("https://calendly.com/mtiutin/30min")
+              openCalendlyPopup("https://calendly.com/transatron/30min")
             }
           >
             Find out more

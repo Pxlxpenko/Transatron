@@ -109,7 +109,7 @@ export default function WatchInActionSectionTransferEdge({
           variant="default"
           className="hover:bg-[#1E1E1E] shadow-none px-12! border border-white rounded-full w-fit h-14! text-2xl bg-accent-dark"
           onClick={() =>
-            openCalendlyPopup("https://calendly.com/mtiutin/30min")
+            openCalendlyPopup("https://calendly.com/transatron/30min")
           }
         >
           Book a demo

@@ -10,8 +10,8 @@ import QuoteDialog from "./QuoteDialog";
 
 export default function Header() {
   const navigation = [
-    { name: "BusinessSuite", link: "/business-suite" },
     { name: "TransferEdge", link: "/transfer-edge" },
+    { name: "BusinessSuite", link: "/business-suite" },
     {
       name: "Documentation",
       link: "https://docs.transatron.io",
@@ -54,11 +54,11 @@ export default function Header() {
 
         <nav className={cn("hidden lg:flex gap-5")}>
           {navigation.map(
-            (item, i) => (
+            (item) => (
               // item.link ? (
               <Link
                 onClick={(e) => {
-                  if (i === 0) {
+                  if (item.link === "/business-suite") {
                     e.preventDefault();
                   }
                 }}
@@ -68,7 +68,7 @@ export default function Header() {
                 className={cn(
                   "relative hover:bg-accent! px-4 py-2 rounded-full text-white text-lg text-center",
                   { "text-white bg-accent": item.link === pathname },
-                  { "cursor-not-allowed": i === 0 }
+                  { "cursor-not-allowed": item.link === "/business-suite" }
                 )}
               >
                 {item.name}
@@ -115,13 +115,13 @@ export default function Header() {
 
           <div className="flex flex-col justify-center items-center gap-7.5">
             {navigation.map(
-              (item, i) => (
+              (item) => (
                 // item.link ? (
                 <Link
                   key={item.name}
                   href={item.link}
                   onClick={(e) => {
-                    if (i === 0) {
+                    if (item.link === "/business-suite") {
                       e.preventDefault();
                       return;
                     }
@@ -130,7 +130,7 @@ export default function Header() {
                   className={cn(
                     "relative hover:bg-accent px-4 py-2 rounded-full text-white active:text-white text-2xl text-center",
                     { "text-white": item.link === pathname },
-                    { "cursor-not-allowed": i === 0 }
+                    { "cursor-not-allowed": item.link === "/business-suite" }
                   )}
                 >
                   {item.name}

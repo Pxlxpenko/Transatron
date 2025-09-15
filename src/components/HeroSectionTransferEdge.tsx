@@ -22,7 +22,7 @@ export default function HeroSectionTransferEdge() {
               variant="default"
               className="bg-transparent hover:bg-[#1E1E1E] shadow-none md:px-8 border border-white rounded-full h-14! text-2xl"
               onClick={() =>
-                openCalendlyPopup("https://calendly.com/mtiutin/30min")
+                openCalendlyPopup("https://calendly.com/transatron/30min")
               }
             >
               Get in touch
